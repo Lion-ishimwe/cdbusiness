@@ -1,0 +1,12 @@
+{
+  "name": "cd-business",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site for CD Business",
+  "scripts": {
+    "start": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

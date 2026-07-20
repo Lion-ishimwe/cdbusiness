@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - CD Business Group Ltd | Quote Within 2 Hours</title>
+<meta name="description" content="Contact CD Business Group Ltd in Kigali: call +250 788 647 027, WhatsApp us, or send your event brief - quotations within 2 hours, free delivery in Kigali.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700;800;900&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="assets/css/modern.css">
+<link rel="icon" type="image/png" href="cdd.PNG">
+<link rel="apple-touch-icon" href="cdd.PNG">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="mainNav">
+  <a class="nav-logo" href="index.html">
+    <img class="nav-logo-image" src="cdd.PNG" alt="CD Business Group logo">
+  </a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNavLinks" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links" id="siteNavLinks">
+    <a class="nav-btn" href="index.html">Home</a>
+    <a class="nav-btn" href="products.html">Products</a>
+    <a class="nav-btn" href="services.html">Services</a>
+    <a class="nav-btn" href="about.html">About Us</a>
+    <a class="nav-btn" href="clients.html">Our Clients</a>
+    <a class="nav-btn active" href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <header class="cat-hero" style="padding-bottom:calc(min(7vh,64px) + 56px);">
+    <span class="eyebrow-dot" style="color:#ff8080;">Contact Us</span>
+    <h1>Send the brief today.<br>Get your quotation in 2 hours.</h1>
+    <p>
+      Share your event date, venue and the products you need — by phone, WhatsApp, email
+      or the form below. We respond with a written, VAT-inclusive quotation and delivery plan.
+    </p>
+  </header>
+
+  <!-- CONTACT CHANNEL CARDS -->
+  <section class="contact-cards">
+    <div class="ccard fade-in">
+      <div class="ccard__ic">&#128222;</div>
+      <small>Call the Team</small>
+      <a class="ccard__link" href="tel:+250788647027">+250 788 647 027</a>
+      <a class="ccard__link" style="font-size:0.9rem;" href="tel:+250796172525">+250 796 172 525</a>
+      <p>Fastest for urgent coordination and same-day availability checks.</p>
+    </div>
+    <div class="ccard ccard--wa fade-in">
+      <div class="ccard__ic">&#128172;</div>
+      <small>WhatsApp</small>
+      <a class="ccard__link" href="https://wa.me/250788647027" target="_blank" rel="noopener">Chat with us now</a>
+      <p>Send your product list, booth size or venue photos — we quote right in the chat.</p>
+    </div>
+    <div class="ccard ccard--red fade-in">
+      <div class="ccard__ic">&#9993;</div>
+      <small>Email</small>
+      <a class="ccard__link" style="font-size:0.9rem;word-break:break-all;" href="mailto:cdbusinessgroupltd@gmail.com">cdbusinessgroupltd@gmail.com</a>
+      <p>Best for written briefs, purchase orders and documentation.</p>
+    </div>
+    <div class="ccard fade-in">
+      <div class="ccard__ic">&#128205;</div>
+      <small>Visit Us</small>
+      <b>Kigali, Rwanda</b>
+      <p>Mon - Fri, 8:00 AM - 6:00 PM. Warehouse viewings by appointment — see the stock before you book.</p>
+    </div>
+  </section>
+
+  <!-- FORM + INFO -->
+  <section class="page-sec page-sec--tint">
+    <div class="contact-layout">
+      <div class="cform-card fade-in">
+        <span class="eyebrow-dot">Enquiry Form</span>
+        <h2>Tell us about your event</h2>
+        <p>Fill in what you know — the form opens WhatsApp or your email app with everything
+        pre-written, so nothing gets lost and we can quote immediately.</p>
+        <form id="briefForm" class="cform" novalidate>
+          <div>
+            <label for="bfName">Name / Company *</label>
+            <input type="text" id="bfName" placeholder="e.g. Jane - Acme Ltd" required>
+          </div>
+          <div>
+            <label for="bfPhone">Phone</label>
+            <input type="tel" id="bfPhone" placeholder="+250 7xx xxx xxx">
+          </div>
+          <div>
+            <label for="bfService">What do you need? *</label>
+            <select id="bfService" required>
+              <option value="">Select a service</option>
+              <option>Exhibition Booth / Shell Scheme</option>
+              <option>Event Furniture Rental</option>
+              <option>Tents &amp; Outdoor Structures</option>
+              <option>AV &amp; Technology</option>
+              <option>Site Facilities (washrooms, carpets...)</option>
+              <option>Full Event Setup</option>
+              <option>Other / Not sure yet</option>
+            </select>
+          </div>
+          <div>
+            <label for="bfDate">Event date</label>
+            <input type="date" id="bfDate">
+          </div>
+          <div>
+            <label for="bfDays">Duration (days)</label>
+            <input type="number" id="bfDays" min="1" placeholder="3">
+          </div>
+          <div>
+            <label for="bfVenue">Venue / City</label>
+            <input type="text" id="bfVenue" placeholder="e.g. Kigali Convention Centre">
+          </div>
+          <div class="full">
+            <label for="bfMsg">Details</label>
+            <textarea id="bfMsg" placeholder="Guest count, booth size, quantities, branding, power needs - anything that helps us quote accurately."></textarea>
+          </div>
+          <div class="cform__actions">
+            <button type="button" class="btn2 btn2--wa" id="bfSendWa">Send via WhatsApp</button>
+            <button type="button" class="btn2 btn2--navy" id="bfSendMail">Send via Email</button>
+          </div>
+          <p class="cform__note">
+            Tip: you can also build a product list in the <a href="products.html" style="color:var(--red);font-weight:700;">catalogue</a>
+            and send it with one tap — quantities and product codes included.
+          </p>
+        </form>
+      </div>
+
+      <div class="info-stack">
+        <div class="info-card fade-in">
+          <h3>Direct Lines</h3>
+          <div class="info-row"><span>Main line</span><b><a href="tel:+250788647027" style="color:inherit;text-decoration:none;">+250 788 647 027</a></b></div>
+          <div class="info-row"><span>Alternative</span><b><a href="tel:+250796172525" style="color:inherit;text-decoration:none;">+250 796 172 525</a></b></div>
+          <div class="info-row"><span>Projects</span><b><a href="tel:+250781262708" style="color:inherit;text-decoration:none;">+250 781 262 708</a></b></div>
+          <div class="info-row"><span>Email</span><b style="word-break:break-all;"><a href="mailto:cdbusinessgroupltd@gmail.com" style="color:inherit;text-decoration:none;">cdbusinessgroupltd@gmail.com</a></b></div>
+        </div>
+
+        <div class="info-card info-card--navy fade-in">
+          <h3>How Booking Works</h3>
+          <ol>
+            <li><b>Send the brief</b> — date, venue and the products or booth size you need.</li>
+            <li><b>Get the quotation</b> — written, itemised, 18% VAT inclusive, within 2 hours.</li>
+            <li><b>Confirm &amp; pay</b> — MTN MoMo Pay 2225255 or BPR Bank 4491855277.</li>
+            <li><b>We deliver &amp; set up</b> — free transport in Kigali, installed by our crew.</li>
+          </ol>
+        </div>
+
+        <div class="info-card fade-in">
+          <h3>Good to Know</h3>
+          <div class="info-row"><span>Pricing</span><b>Per day, VAT inclusive</b></div>
+          <div class="info-row"><span>Longer bookings</span><b>Discounts over 2 days</b></div>
+          <div class="info-row"><span>Booth packages</span><b>Priced for 3 event days</b></div>
+          <div class="info-row"><span>Delivery</span><b>Free, with setup</b></div>
+          <div class="info-row"><span>Coverage</span><b>Rwanda &amp; East Africa</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta2 fade-in">
+    <div>
+      <h2>Prefer to browse first?</h2>
+      <p>Every product is photographed from our stock — add what you need and send the list in one tap.</p>
+    </div>
+    <div class="cta2__btns">
+      <a class="btn2 btn2--white" href="products.html">Open the Catalogue</a>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:900;color:var(--white);letter-spacing:0.05em;">
+        CD BUSINESS GROUP LTD
+      </div>
+      <div style="font-size:0.75rem;color:var(--red);letter-spacing:0.15em;text-transform:uppercase;margin-top:4px;">"You Deserve More"</div>
+      <p>Rwanda's premier events and exhibitions furniture company - serving East Africa with world-class solutions.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Product Catalogue</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="clients.html">Our Clients</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact &amp; Payment</h4>
+      <ul>
+        <li><a href="tel:+250788647027">+250 788 647 027</a></li>
+        <li><a href="tel:+250796172525">+250 796 172 525</a></li>
+        <li><a href="mailto:cdbusinessgroupltd@gmail.com">cdbusinessgroupltd@gmail.com</a></li>
+        <li>MoMo Pay: 2225255 &middot; BPR: 4491855277</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2026 CD Business Group Ltd. All rights reserved. Kigali, Rwanda.</span>
+    <span class="footer-tag">#DannyEvents &middot; We Do Events in East Africa</span>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<button class="whatsapp-float2" onclick="window.open('https://wa.me/250788647027','_blank')" title="WhatsApp Us" aria-label="WhatsApp Us">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.2 7L4 29l7.2-2.1c1.9 1 4 1.6 6.3 1.6h.5c6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 17c-.3.8-1.5 1.5-2.4 1.7-.6.1-1.4.2-4.1-.9-3.4-1.4-5.6-4.9-5.8-5.1-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.6c.2 0 .5-.1.7.5l1 2.4c.1.2.1.4 0 .6l-.4.7-.6.6c-.2.2-.4.4-.2.7.2.4 1 1.7 2.2 2.7 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.1.8-.1l1.2-1.4c.3-.3.5-.3.8-.2l2.6 1.2c.4.2.6.3.7.5.1.1.1.9-.2 1.7z"/></svg>
+</button>
+
+<script src="assets/data/products.js"></script>
+<script src="assets/js/quote.js"></script>
+<script src="script.js"></script>
+<script>
+// Enquiry form: composes a WhatsApp or email message (no backend needed)
+(function () {
+  "use strict";
+  var WA = "250788647027";
+  var EMAIL = "cdbusinessgroupltd@gmail.com";
+
+  function val(id) { return (document.getElementById(id).value || "").trim(); }
+
+  function compose() {
+    var lines = ["Hello CD Business Group, I would like a quotation.", ""];
+    lines.push("Name/Company: " + val("bfName"));
+    if (val("bfPhone")) lines.push("Phone: " + val("bfPhone"));
+    lines.push("Service: " + val("bfService"));
+    if (val("bfDate")) lines.push("Event date: " + val("bfDate"));
+    if (val("bfDays")) lines.push("Duration: " + val("bfDays") + " day(s)");
+    if (val("bfVenue")) lines.push("Venue: " + val("bfVenue"));
+    if (val("bfMsg")) { lines.push(""); lines.push("Details: " + val("bfMsg")); }
+    lines.push(""); lines.push("Sent from the CD Business Group website.");
+    return lines.join("\n");
+  }
+
+  function validate() {
+    if (!val("bfName") || !val("bfService")) {
+      if (window.CDToast) CDToast("Please add your name and the service you need");
+      (!val("bfName") ? document.getElementById("bfName") : document.getElementById("bfService")).focus();
+      return false;
+    }
+    return true;
+  }
+
+  document.getElementById("bfSendWa").addEventListener("click", function () {
+    if (!validate()) return;
+    window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(compose()), "_blank");
+  });
+  document.getElementById("bfSendMail").addEventListener("click", function () {
+    if (!validate()) return;
+    window.location.href = "mailto:" + EMAIL +
+      "?subject=" + encodeURIComponent("Event enquiry - " + val("bfService")) +
+      "&body=" + encodeURIComponent(compose());
+  });
+})();
+</script>
+</body>
+</html>
