@@ -76,6 +76,14 @@
           '<input id="qName" type="text" placeholder="Your name / company">' +
           '<input id="qDate" type="text" placeholder="Event date (e.g. 15 Aug 2026)">' +
           '<input id="qVenue" type="text" placeholder="Venue or city">' +
+          '<select id="qType">' +
+            '<option value="">Event type (optional)</option>' +
+            '<option>Conference</option>' +
+            '<option>Exhibition / Trade show</option>' +
+            '<option>Wedding / Social</option>' +
+            '<option>Outdoor event</option>' +
+            '<option>Other</option>' +
+          '</select>' +
         '</div>' +
         '<div class="qdrawer__foot">' +
           '<button class="btn2 btn2--wa" id="qSendWa">Send via WhatsApp</button>' +
@@ -95,6 +103,7 @@
     var c = basket.count();
     countEl.textContent = c;
     countEl.style.display = c ? "flex" : "none";
+    document.dispatchEvent(new CustomEvent("cdquote:change", { detail: { count: c } }));
 
     if (!basket.items.length) {
       itemsEl.innerHTML = '<div class="qdrawer__empty">Your quote list is empty.<br>' +
@@ -127,6 +136,7 @@
     var name = (document.getElementById("qName") || {}).value || "";
     var date = (document.getElementById("qDate") || {}).value || "";
     var venue = (document.getElementById("qVenue") || {}).value || "";
+    var type = (document.getElementById("qType") || {}).value || "";
 
     var lines = [];
     lines.push("Hello CD Business Group, I would like a quotation for:");
@@ -138,6 +148,7 @@
     if (name) lines.push("Name/Company: " + name);
     if (date) lines.push("Event date: " + date);
     if (venue) lines.push("Venue: " + venue);
+    if (type) lines.push("Event type: " + type);
     lines.push("");
     lines.push("Sent from the CD Business Group website catalogue.");
     return lines.join("\n");
@@ -148,9 +159,11 @@
       localStorage.setItem(FORM_KEY, JSON.stringify({
         name: (document.getElementById("qName") || {}).value || "",
         date: (document.getElementById("qDate") || {}).value || "",
-        venue: (document.getElementById("qVenue") || {}).value || ""
+        venue: (document.getElementById("qVenue") || {}).value || "",
+        type: (document.getElementById("qType") || {}).value || ""
       }));
     } catch (e) {}
+    document.dispatchEvent(new CustomEvent("cdctx:change", { detail: { source: "drawer" } }));
   }
   function restoreForm() {
     try {
@@ -159,6 +172,7 @@
       if (f.name) document.getElementById("qName").value = f.name;
       if (f.date) document.getElementById("qDate").value = f.date;
       if (f.venue) document.getElementById("qVenue").value = f.venue;
+      if (f.type) document.getElementById("qType").value = f.type;
     } catch (e) {}
   }
 
@@ -192,6 +206,7 @@
     ["qName", "qDate", "qVenue"].forEach(function (id) {
       document.getElementById(id).addEventListener("input", persistForm);
     });
+    document.getElementById("qType").addEventListener("change", persistForm);
 
     document.getElementById("qItems").addEventListener("click", function (e) {
       var btn = e.target.closest("button[data-act]");

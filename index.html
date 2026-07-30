@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CD Business Group Ltd - Event Furniture, Exhibition Booths &amp; Tents | Kigali, Rwanda</title>
-<meta name="description" content="Rwanda's premier events and exhibitions company. Rent VIP &amp; VVIP furniture, shell scheme booths, pagoda tents, stage lights and AV equipment. Free delivery in Kigali - quote on WhatsApp in minutes.">
+<meta name="description" content="Rwanda's premier events and exhibitions company. Rent VIP &amp; VVIP furniture, shell scheme booths, pagoda tents, stage lights and AV equipment. Free delivery in Kigali.">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700;800;900&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="assets/css/modern.css">
@@ -14,7 +14,7 @@
 <body>
 
 <!-- NAVIGATION -->
-<nav id="mainNav">
+<nav id="mainNav" class="nav--clear">
   <a class="nav-logo" href="index.html">
     <img class="nav-logo-image" src="cdd.PNG" alt="CD Business Group logo">
   </a>
@@ -30,216 +30,202 @@
     <a class="nav-btn" href="about.html">About Us</a>
     <a class="nav-btn" href="clients.html">Our Clients</a>
     <a class="nav-btn" href="contact.html">Contact</a>
+    <button class="nav-cta js-quote-open" type="button">Plan &amp; Get a Quote</button>
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero2">
-  <div class="hero2__copy">
-    <span class="eyebrow-dot">You Deserve More &middot; #DannyEvents</span>
-    <h1 class="hero2__title">Premium event furniture &amp; exhibition setups, <em>delivered free</em> across Kigali</h1>
-    <p class="hero2__lead">
-      CD Business Group Ltd equips East Africa's conferences, exhibitions and celebrations —
-      VVIP seating, shell scheme booths, pagoda tents, stage lighting and full AV.
-      Browse the live catalogue, build your quote list, and get pricing on WhatsApp within 2 hours.
+<!-- VIDEO HERO -->
+<header class="vhero">
+  <!-- SAMPLE VIDEO: replace the sources below with real CD Business event footage,
+       e.g. a local file at assets/video/hero.mp4 -->
+  <video class="vhero__video" autoplay muted loop playsinline preload="metadata" poster="assets/products/hero-vip-set.jpg">
+    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+  <div class="vhero__overlay"></div>
+
+  <div class="vhero__content">
+    <span class="vhero__eyebrow">CD Business Group &middot; Kigali, Rwanda</span>
+    <h1 class="vhero__title">We set the stage<br>where East Africa <em>connects</em></h1>
+    <p class="vhero__lead">
+      Furniture, exhibition booths, tents and event production &mdash; designed,
+      delivered and built by one team, for events people remember.
     </p>
-    <div class="hero2__ctas">
-      <a class="btn2 btn2--red" href="products.html">Browse Catalogue</a>
-      <a class="btn2 btn2--wa" href="https://wa.me/250788647027?text=Hello%20CD%20Business%20Group%2C%20I%20would%20like%20a%20quotation." target="_blank" rel="noopener">Quote on WhatsApp</a>
-      <a class="btn2 btn2--ghost" href="contact.html">Contact Us</a>
-    </div>
-    <div class="hero2__stats">
-      <div class="hero2__stat"><b>40<span>+</span></b><small>Product Lines</small></div>
-      <div class="hero2__stat"><b>100<span>+</span></b><small>Clients Served</small></div>
-      <div class="hero2__stat"><b>2<span>hrs</span></b><small>Quote Response</small></div>
-      <div class="hero2__stat"><b>EAC</b><small>Regional Coverage</small></div>
-    </div>
+    <button class="btn-hero js-quote-open" id="heroQuoteBtn" type="button">
+      Request a Quote
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+    </button>
   </div>
 
-  <div class="hero2__visual">
-    <figure class="hero2__card hero2__card--tall">
-      <img src="assets/products/cd009-vvip-armchair-velvet.jpg" alt="VVIP velvet armchair in a styled lounge">
-      <figcaption>VIP &amp; VVIP Lounges</figcaption>
-    </figure>
-    <figure class="hero2__card">
-      <img src="assets/products/cd029-booth-photo.jpg" alt="Shell scheme exhibition booth">
-      <figcaption>Exhibition Booths</figcaption>
-    </figure>
-    <figure class="hero2__card">
-      <img src="assets/products/hero-stretch-tent.jpg" alt="Stretch tent at an outdoor event">
-      <figcaption>Tents &amp; Outdoor</figcaption>
-    </figure>
-  </div>
+  <div class="vhero__scroll" aria-hidden="true"><span></span>Scroll</div>
 </header>
 
-<!-- TICKER -->
-<div class="ticker-bar">
-  <div class="ticker-track">
-    <span class="ticker-item">Events and Exhibitions</span>
-    <span class="ticker-item">Shell Scheme Booths</span>
-    <span class="ticker-item">VIP and VVIP Furniture</span>
-    <span class="ticker-item">Pagoda Tents</span>
-    <span class="ticker-item">Brochure Racks</span>
-    <span class="ticker-item">Smart TVs</span>
-    <span class="ticker-item">Stage Lights</span>
-    <span class="ticker-item">Portable Washrooms</span>
-    <span class="ticker-item">Free Delivery</span>
-    <span class="ticker-item">18% VAT Inclusive</span>
-    <span class="ticker-item">Events and Exhibitions</span>
-    <span class="ticker-item">Shell Scheme Booths</span>
-    <span class="ticker-item">VIP and VVIP Furniture</span>
-    <span class="ticker-item">Pagoda Tents</span>
-    <span class="ticker-item">Brochure Racks</span>
-    <span class="ticker-item">Smart TVs</span>
-    <span class="ticker-item">Stage Lights</span>
-    <span class="ticker-item">Portable Washrooms</span>
-    <span class="ticker-item">Free Delivery</span>
-    <span class="ticker-item">18% VAT Inclusive</span>
-  </div>
-</div>
-
-<!-- CATEGORY TILES -->
-<section class="cats">
-  <div class="sec-head sec-head--center fade-in">
-    <span class="eyebrow-dot" style="justify-content:center;">2026 Furniture Collection</span>
-    <h2>Shop the Catalogue by Category</h2>
-    <div class="sec-line"></div>
-  </div>
-  <div class="cats__grid">
-    <a class="cat-tile fade-in" href="products.html#cat=vip">
-      <img src="assets/products/cd008-vvip-armchair-leather.jpg" alt="VVIP armchair">
-      <span class="cat-tile__label"><small>6 products</small><b>VIP &amp; VVIP Seating</b></span>
-    </a>
-    <a class="cat-tile fade-in" href="products.html#cat=chairs">
-      <img src="assets/products/cd003-chair-type1.jpg" alt="Event chair">
-      <span class="cat-tile__label"><small>9 products</small><b>Chairs &amp; Bar Stools</b></span>
-    </a>
-    <a class="cat-tile fade-in" href="products.html#cat=tables">
-      <img src="assets/products/cd024-milky-high-table.jpg" alt="High cocktail table">
-      <span class="cat-tile__label"><small>13 products</small><b>Event Tables</b></span>
-    </a>
-    <a class="cat-tile cat-tile--cover fade-in" href="products.html#cat=booths">
-      <img src="assets/products/cd029-booth-photo.jpg" alt="Shell scheme booth">
-      <span class="cat-tile__label"><small>Booths from 2x2m to 9x9m</small><b>Exhibition Booths &amp; Panels</b></span>
-    </a>
-    <a class="cat-tile cat-tile--cover fade-in" href="products.html#cat=tents">
-      <img src="assets/products/cd039-pagoda-transparent.jpg" alt="Pagoda tent">
-      <span class="cat-tile__label"><small>Pagoda &amp; stretch tents</small><b>Tents &amp; Outdoor</b></span>
-    </a>
-    <a class="cat-tile fade-in" href="products.html#cat=av">
-      <img src="assets/products/cd030-smart-tv.jpg" alt="Smart TV on stand">
-      <span class="cat-tile__label"><small>Screens, lights &amp; more</small><b>AV &amp; Technology</b></span>
-    </a>
-  </div>
-</section>
-
-<!-- FEATURED PRODUCTS -->
-<section class="featured">
-  <div class="sec-head fade-in">
-    <span class="eyebrow-dot">Most Requested</span>
-    <h2>Featured Products</h2>
-    <div class="sec-line"></div>
-  </div>
-  <div class="featured__grid pgrid" id="featuredGrid"></div>
-  <div style="text-align:center;margin-top:36px;">
-    <a class="btn2 btn2--navy" href="products.html">View All 40+ Products</a>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="how">
-  <div class="sec-head sec-head--center fade-in" style="max-width:760px;">
-    <span class="eyebrow-dot" style="justify-content:center;color:#ff8080;">Simple Process</span>
-    <h2>From Browse to Built in 4 Steps</h2>
-  </div>
-  <div class="how__grid">
-    <div class="how-step fade-in">
-      <div class="how-step__num">01</div>
-      <h3>Browse &amp; Add to Quote</h3>
-      <p>Pick products from the online catalogue and build your quote list — codes, sizes and stock are all shown.</p>
-    </div>
-    <div class="how-step fade-in">
-      <div class="how-step__num">02</div>
-      <h3>Send via WhatsApp</h3>
-      <p>One tap sends your list with your event date and venue. We reply with a written quotation within 2 hours.</p>
-    </div>
-    <div class="how-step fade-in">
-      <div class="how-step__num">03</div>
-      <h3>Confirm &amp; Pay Easily</h3>
-      <p>Fixed pricing, 18% VAT inclusive. Pay by MTN MoMo (2225255), bank transfer, or standard project terms.</p>
-    </div>
-    <div class="how-step fade-in">
-      <div class="how-step__num">04</div>
-      <h3>We Deliver &amp; Set Up</h3>
-      <p>Free delivery with professional setup by our own crew — on time, in Kigali and across East Africa.</p>
-    </div>
-  </div>
-</section>
-
-<!-- BOOTH SHOWCASE -->
-<section class="booths">
-  <div class="sec-head fade-in">
-    <span class="eyebrow-dot">Exhibition Specialists</span>
-    <h2>Shell Scheme Booths, Built for Your Brand</h2>
-    <div class="sec-line"></div>
-  </div>
-  <div class="booths__grid">
-    <div class="booths__img fade-in">
-      <img src="assets/products/cd029-booth-photo.jpg" alt="Shell scheme exhibition booth with counter, chairs and brochure rack">
-    </div>
-    <div class="fade-in">
-      <p style="font-size:1rem;line-height:1.85;color:rgba(3,6,58,0.72);">
-        Complete branded booths with fascia name board, lighting, carpet, reception desk,
-        brochure rack and meeting set — installed and dismantled by our team.
-        Standard packages cover <b>3 event days</b>, with 1,000 shell scheme panels in stock
-        for custom layouts of any size.
+<!-- EXHIBITION STAND DESIGNS PORTFOLIO -->
+<section class="stands">
+  <div class="stands__head fade-in">
+    <div>
+      <span class="eyebrow-dot">Exhibition Specialists</span>
+      <h2>Our Exhibition Stand Designs</h2>
+      <p class="stands__sub">
+        Shell scheme booths from 2m x 2m to full custom island stands &mdash;
+        designed, branded, built and dismantled by our own crew.
       </p>
-      <div class="booths__sizes">
-        <span class="size-chip">2m x 2m</span>
-        <span class="size-chip">2m x 3m</span>
-        <span class="size-chip">2m x 4m</span>
-        <span class="size-chip">3m x 3m</span>
-        <span class="size-chip">3m x 4m</span>
-        <span class="size-chip">3m x 6m</span>
-        <span class="size-chip">9m x 9m</span>
-        <span class="size-chip" style="border-style:dashed;">Custom layouts</span>
+    </div>
+    <div class="stands__nav">
+      <button class="stands__arrow" id="standsPrev" type="button" aria-label="Previous designs">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg>
+      </button>
+      <button class="stands__arrow" id="standsNext" type="button" aria-label="Next designs">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- PLACEHOLDER IMAGES: swap these for real stand design renders / photos as they become available -->
+  <div class="stands__track" id="standsTrack">
+    <article class="stand-card fade-in">
+      <div class="stand-card__img">
+        <img src="assets/products/cd029-booth-photo.jpg" alt="Furnished shell scheme booth with counter, chairs and brochure rack" loading="lazy">
+        <span class="stand-card__num">01</span>
       </div>
-      <a class="btn2 btn2--red" href="products.html#CD029">Explore Booth Options</a>
-      <p class="booths__note">Add a Smart TV, stage lights and artificial grass carpet to complete your stand.</p>
-    </div>
+      <div class="stand-card__body">
+        <span class="stand-card__size">2m x 2m &mdash; 3m x 4m</span>
+        <h3>Shell Scheme Booth</h3>
+        <p>The classic exhibition stand with fascia name board, lighting and carpet &mdash; ready for your brand.</p>
+      </div>
+    </article>
+    <article class="stand-card fade-in">
+      <div class="stand-card__img">
+        <img src="assets/products/cd029-booth-render.jpg" alt="Shell scheme booth structure render" loading="lazy">
+        <span class="stand-card__num">02</span>
+      </div>
+      <div class="stand-card__body">
+        <span class="stand-card__size">Furnished package</span>
+        <h3>Booth with Reception Set</h3>
+        <p>Reception counter, meeting table, chairs and brochure rack included &mdash; walk in and start exhibiting.</p>
+      </div>
+    </article>
+    <article class="stand-card fade-in">
+      <div class="stand-card__img">
+        <img src="assets/products/cd028-shell-panels.jpg" alt="Freestanding shell scheme panels" loading="lazy">
+        <span class="stand-card__num">03</span>
+      </div>
+      <div class="stand-card__body">
+        <span class="stand-card__size">Modular &mdash; any layout</span>
+        <h3>Panel Walls &amp; Partitions</h3>
+        <p>Modular walling for exhibition halls, poster sessions, registration zones and wayfinding.</p>
+      </div>
+    </article>
+    <article class="stand-card fade-in">
+      <div class="stand-card__img">
+        <img src="assets/products/cd028-shell-panels-render.jpg" alt="Modular panel configuration render" loading="lazy">
+        <span class="stand-card__num">04</span>
+      </div>
+      <div class="stand-card__body">
+        <span class="stand-card__size">3m x 6m &mdash; 9m x 9m</span>
+        <h3>Corner &amp; Island Stands</h3>
+        <p>Open layouts for bigger footprints &mdash; multiple entry points, demo zones and storage.</p>
+      </div>
+    </article>
+    <article class="stand-card fade-in">
+      <div class="stand-card__img">
+        <img src="assets/products/hero-vip-set.jpg" alt="Styled VIP lounge setup" loading="lazy">
+        <span class="stand-card__num">05</span>
+      </div>
+      <div class="stand-card__body">
+        <span class="stand-card__size">Your design, our build</span>
+        <h3>Custom Branded Build</h3>
+        <p>Bring a sketch or a brand book &mdash; we design and build a stand that is completely yours.</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="stands__cta fade-in">
+    <a class="btn2 btn2--navy" href="products.html#cat=booths">Explore Booth Options</a>
+    <button class="btn2 btn2--ghost js-quote-open" type="button" data-need="Exhibition booth">Request a Custom Design</button>
   </div>
 </section>
 
-<!-- VALUE PROPS -->
-<section class="props">
-  <div class="sec-head fade-in">
-    <span class="eyebrow-dot">Why CD Business Group</span>
-    <h2>Built to Deliver, Priced to Trust</h2>
-    <div class="sec-line"></div>
+<!-- OUR WORK -->
+<section class="work">
+  <div class="sec-head sec-head--center fade-in work__head">
+    <span class="eyebrow-dot">Our Work</span>
+    <h2>Events We Bring to Life</h2>
+    <p class="work__sub">A glimpse of the setups our team designs, delivers and builds across East Africa.</p>
   </div>
-  <div class="props__grid">
-    <div class="prop-card fade-in">
-      <h3>Free Delivery &amp; Setup</h3>
-      <p>Transport is complementary and our own crew handles setup — the same standard for local and international events.</p>
-    </div>
-    <div class="prop-card fade-in">
-      <h3>Transparent Pricing</h3>
-      <p>Per-day rates, 18% VAT inclusive, written quotations, and discounts for bookings over 2 days. No surprises.</p>
-    </div>
-    <div class="prop-card fade-in">
-      <h3>Deep Stock, Real Photos</h3>
-      <p>1,000 conference chairs, 1,000 booth panels, 300 event chairs and more — every catalogue item is in our warehouse.</p>
-    </div>
-    <div class="prop-card fade-in">
-      <h3>One Supplier, Full Event</h3>
-      <p>Furniture, booths, tents, AV, lighting, carpets and sanitation from one team — one delivery, one invoice.</p>
-    </div>
+  <!-- PLACEHOLDER IMAGES: replace with real photos from delivered events (setup shots, finished venues, guests) -->
+  <div class="work__grid">
+    <figure class="work-tile work-tile--wide fade-in">
+      <img src="assets/products/hero-stretch-tent.jpg" alt="Stretch tent at an outdoor event" loading="lazy">
+      <figcaption><small>Outdoor Reception</small><b>Stretch Tent Setup</b></figcaption>
+    </figure>
+    <figure class="work-tile fade-in">
+      <img src="assets/products/cd039-pagoda-transparent.jpg" alt="Transparent pagoda tent" loading="lazy">
+      <figcaption><small>Evening Gala</small><b>Transparent Pagoda</b></figcaption>
+    </figure>
+    <figure class="work-tile fade-in">
+      <img src="assets/products/hero-vip-set.jpg" alt="VVIP lounge furniture arrangement" loading="lazy">
+      <figcaption><small>Conference</small><b>VVIP Lounge</b></figcaption>
+    </figure>
+    <figure class="work-tile fade-in">
+      <img src="assets/products/cd035-stage-lights.jpg" alt="Stage lighting rig" loading="lazy">
+      <figcaption><small>Live Production</small><b>Stage &amp; Lighting</b></figcaption>
+    </figure>
+    <figure class="work-tile work-tile--wide fade-in">
+      <img src="assets/products/cd029-booth-photo.jpg" alt="Shell scheme exhibition booth" loading="lazy">
+      <figcaption><small>Trade Exhibition</small><b>Branded Booths</b></figcaption>
+    </figure>
+    <figure class="work-tile fade-in">
+      <img src="assets/products/cd037-pagoda-6x6.jpg" alt="Pagoda tent village" loading="lazy">
+      <figcaption><small>Exhibition Village</small><b>Pagoda Tents</b></figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- CLIENTS -->
+<!-- BLOG -->
+<section class="blogs">
+  <div class="blogs__head fade-in">
+    <div>
+      <span class="eyebrow-dot">From the Blog</span>
+      <h2>Event Insights &amp; Guides</h2>
+    </div>
+    <a class="btn2 btn2--navy" href="blog.html">More Blogs</a>
+  </div>
+  <div class="blogs__grid">
+    <a class="blog-card fade-in" href="blog-booth-size-guide.html">
+      <div class="blog-card__img">
+        <img src="assets/products/cd029-booth-photo.jpg" alt="Furnished shell scheme exhibition booth" loading="lazy">
+        <span class="blog-card__tag">Exhibitions</span>
+      </div>
+      <div class="blog-card__body">
+        <small class="blog-card__date">July 2026 &middot; 4 min read</small>
+        <h3>How to Choose the Right Exhibition Booth Size</h3>
+        <p>From a 2m x 2m shell scheme to a 9m x 9m island stand — what each footprint is really for, and how to match yours to your goals for the show.</p>
+        <span class="blog-card__more">Read article
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </span>
+      </div>
+    </a>
+    <a class="blog-card fade-in" href="blog-outdoor-tent-guide.html">
+      <div class="blog-card__img">
+        <img src="assets/products/hero-stretch-tent.jpg" alt="Stretch tent at an outdoor event" loading="lazy">
+        <span class="blog-card__tag">Outdoor Events</span>
+      </div>
+      <div class="blog-card__body">
+        <small class="blog-card__date">July 2026 &middot; 5 min read</small>
+        <h3>Planning an Outdoor Event in Kigali: A Practical Tent Guide</h3>
+        <p>Pagoda or stretch tent? How many square metres per guest? A working checklist for covered, comfortable open-air events — rain or shine.</p>
+        <span class="blog-card__more">Read article
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- TRUSTED BY -->
 <section class="home-clients-preview fade-in">
-  <div class="sec-head sec-head--center" style="padding:0 var(--mx) 26px;">
+  <div class="sec-head sec-head--center" style="padding:56px var(--mx) 26px;">
     <span class="eyebrow-dot" style="justify-content:center;">Trusted By</span>
     <h2>Brands &amp; Institutions We Serve</h2>
     <div class="sec-line"></div>
@@ -280,22 +266,10 @@
       </div>
     </div>
   </div>
-  <div class="home-clients-preview__wrap" style="margin-top:26px;">
+  <div class="home-clients-preview__wrap" style="margin-top:26px;padding-bottom:56px;">
     <a href="clients.html" class="btn-outline home-clients-preview__btn">View Our Clients</a>
   </div>
 </section>
-
-<!-- CTA BANNER -->
-<div class="cta2 fade-in">
-  <div>
-    <h2>Ready to Make Your Event Unforgettable?</h2>
-    <p>Build your quote list online or talk to the team now — we respond within 2 hours.</p>
-  </div>
-  <div class="cta2__btns">
-    <a class="btn2 btn2--white" href="products.html">Start Your Quote</a>
-    <a class="btn2 btn2--ghost" href="tel:+250788647027">Call +250 788 647 027</a>
-  </div>
-</div>
 
 <!-- FOOTER -->
 <footer>
@@ -304,7 +278,7 @@
       <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:900;color:var(--white);letter-spacing:0.05em;">
         CD BUSINESS GROUP LTD
       </div>
-      <div style="font-size:0.75rem;color:var(--red);letter-spacing:0.15em;text-transform:uppercase;margin-top:4px;">"You Deserve More"</div>
+      <div style="font-size:0.75rem;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-top:4px;">"You Deserve More"</div>
       <p>Rwanda's premier events and exhibitions furniture company - serving East Africa with world-class solutions.</p>
     </div>
     <div class="footer-col">
@@ -342,41 +316,23 @@
 
 <script src="assets/data/products.js"></script>
 <script src="assets/js/quote.js"></script>
+<script src="assets/js/quote-modal.js"></script>
 <script src="script.js"></script>
 <script>
-// Featured products (rendered from catalogue data)
+// Stand designs carousel
 (function () {
-  var FEATURED = ["CD008", "CD029", "CD036", "CD007", "CD019-H", "CD030", "CD035", "CD043"];
-  var grid = document.getElementById("featuredGrid");
-  if (!grid) return;
-  var html = "";
-  FEATURED.forEach(function (code) {
-    var p = CD_PRODUCTS.filter(function (x) { return x.code === code; })[0];
-    if (!p) return;
-    html +=
-      '<article class="pcard fade-in">' +
-        '<a class="pcard__img" href="products.html#' + p.code + '" style="text-decoration:none;">' +
-          '<img src="assets/products/' + p.imgs[0] + '" alt="' + p.name + '" loading="lazy">' +
-          '<span class="pcard__code">' + p.code + '</span>' +
-        '</a>' +
-        '<div class="pcard__body">' +
-          '<h3 class="pcard__name">' + p.name + '</h3>' +
-          '<div class="pcard__size">' + p.size + '</div>' +
-          '<div class="pcard__actions">' +
-            '<button class="pcard__btn pcard__btn--add" data-code="' + p.code + '" data-name="' + p.name.replace(/"/g, "&quot;") + '">Add to Quote</button>' +
-            '<a class="pcard__btn pcard__btn--view" href="products.html#' + p.code + '" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">Details</a>' +
-          '</div>' +
-        '</div>' +
-      '</article>';
+  "use strict";
+  var track = document.getElementById("standsTrack");
+  if (!track) return;
+  function step() {
+    var card = track.querySelector(".stand-card");
+    return card ? card.getBoundingClientRect().width + 24 : 340;
+  }
+  document.getElementById("standsPrev").addEventListener("click", function () {
+    track.scrollBy({ left: -step(), behavior: "smooth" });
   });
-  grid.innerHTML = html;
-  grid.addEventListener("click", function (e) {
-    var btn = e.target.closest("button[data-code]");
-    if (!btn) return;
-    CDQuote.add(btn.getAttribute("data-code"), btn.getAttribute("data-name"), 1);
-    btn.textContent = "Added ✓";
-    btn.classList.add("added");
-    setTimeout(function () { btn.textContent = "Add to Quote"; btn.classList.remove("added"); }, 1400);
+  document.getElementById("standsNext").addEventListener("click", function () {
+    track.scrollBy({ left: step(), behavior: "smooth" });
   });
 })();
 </script>

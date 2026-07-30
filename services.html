@@ -29,6 +29,7 @@
       <a class="nav-btn" href="about.html">About Us</a>
     <a class="nav-btn" href="clients.html">Our Clients</a>
     <a class="nav-btn" href="contact.html">Contact</a>
+    <button class="nav-cta js-quote-open" type="button">Plan &amp; Get a Quote</button>
   </div>
 </nav>
 
@@ -173,7 +174,7 @@
         <article class="services-editorial-item fade-in">
           <div class="services-editorial-item__body">
             <span class="services-editorial-item__type">Staffing</span>
-            <h3>USHERS</h3>
+            <h3>Ushers</h3>
           </div>
         </article>
         <article class="services-editorial-item fade-in">
@@ -291,8 +292,165 @@
   <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.2 7L4 29l7.2-2.1c1.9 1 4 1.6 6.3 1.6h.5c6.6 0 12-5.4 12-12S22.6 3 16 3zm5.9 17c-.3.8-1.5 1.5-2.4 1.7-.6.1-1.4.2-4.1-.9-3.4-1.4-5.6-4.9-5.8-5.1-.2-.2-1.4-1.9-1.4-3.6s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.6c.2 0 .5-.1.7.5l1 2.4c.1.2.1.4 0 .6l-.4.7-.6.6c-.2.2-.4.4-.2.7.2.4 1 1.7 2.2 2.7 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.1.8-.1l1.2-1.4c.3-.3.5-.3.8-.2l2.6 1.2c.4.2.6.3.7.5.1.1.1.9-.2 1.7z"/></svg>
 </button>
 
+<!-- SERVICE DETAIL MODAL -->
+<div class="qmodal svmodal" id="svModal" role="dialog" aria-modal="true" aria-labelledby="svTitle">
+  <div class="qmodal__backdrop" data-sv-close></div>
+  <div class="qmodal__panel">
+    <button class="qmodal__close" type="button" data-sv-close aria-label="Close">&times;</button>
+    <span class="qmodal__eyebrow" id="svType"></span>
+    <h2 id="svTitle"></h2>
+    <p class="qmodal__sub" id="svDesc"></p>
+    <div class="svmodal__includes">
+      <span class="svmodal__includes-label">What this covers</span>
+      <ul id="svList"></ul>
+    </div>
+    <div class="qmodal__actions">
+      <button type="button" class="btn2 btn2--navy" id="svRequest">Request This Service</button>
+      <a class="btn2 btn2--wa" id="svWa" target="_blank" rel="noopener">Ask on WhatsApp</a>
+    </div>
+    <div class="qmodal__hint">Tell us your event date and venue &mdash; we&rsquo;ll shape this service around it.</div>
+  </div>
+</div>
+
 <script src="assets/data/products.js"></script>
 <script src="assets/js/quote.js"></script>
+<script src="assets/js/quote-modal.js"></script>
 <script src="script.js"></script>
+<script>
+// Live service register: click a service card to see what it covers
+(function () {
+  "use strict";
+
+  // order must match the cards in .services-editorial-register__grid
+  var SERVICES = [
+    {
+      type: "Planning", title: "Venue Selection and Negotiation",
+      desc: "We scout venues that fit your audience, budget and technical needs, then negotiate rates and terms on your behalf so you get the right space at the right price.",
+      list: ["Venue shortlists with site visits", "Capacity and layout assessment", "Rate negotiation and contracting", "Liaison with venue management until event day"]
+    },
+    {
+      type: "Administration", title: "Event Secretariat Services",
+      desc: "A dedicated secretariat that runs the paperwork and communication engine of your event — before, during and after.",
+      list: ["Delegate correspondence and RSVP tracking", "Programme and agenda management", "Document preparation and minutes", "Staffed secretariat desk on site"]
+    },
+    {
+      type: "Management", title: "Event Registration & Budget Management",
+      desc: "Smooth guest check-in and clear control of what the event spends, with reporting you can hand to your finance team.",
+      list: ["Online and on-site registration", "Badges, guest lists and check-in desks", "Budget planning and expenditure tracking", "Supplier coordination and reconciliation"]
+    },
+    {
+      type: "Experience", title: "Event Decor",
+      desc: "Concept-to-teardown styling that turns a venue into your brand's space — stages, draping, florals and themed setups.",
+      list: ["Decor concepts and mood boards", "Stage and backdrop styling", "Floral, table and entrance styling", "Full setup and teardown by our crew"]
+    },
+    {
+      type: "Technical", title: "Audio Visual Services",
+      desc: "Speakers, projection and LED screens delivered, rigged and operated by our technicians so every seat sees and hears clearly.",
+      list: ["LED screens and projection", "PA systems and microphones", "Live switching and playback", "On-site AV technicians throughout"]
+    },
+    {
+      type: "Production", title: "Lighting & Stage Packages",
+      desc: "Stage builds and lighting rigs sized to your venue and programme, from a simple podium wash to full show lighting.",
+      list: ["Stage design and build", "Ambient and stage lighting", "Trussing and rigging", "Show operation on event day"]
+    },
+    {
+      type: "Atmosphere", title: "Photography, Confetti & Smoke Machine",
+      desc: "The moments layer: professional coverage of your event plus the effects that make key moments land.",
+      list: ["Professional event photography", "Confetti moments for reveals and awards", "Smoke and haze effects", "Coordination with your programme's key moments"]
+    },
+    {
+      type: "Branding", title: "Print Material Design & Production",
+      desc: "Design and production of everything printed at your event, done as one consistent brand package.",
+      list: ["Artwork and layout design", "Large-format banners and backdrops", "Badges, programmes and signage", "Delivery and installation at the venue"]
+    },
+    {
+      type: "Logistics", title: "Transportation",
+      desc: "Our own trucks and drivers move equipment and materials — collected, delivered and returned on schedule.",
+      list: ["Equipment trucking and handling", "Scheduled delivery and collection", "Inter-venue transfers during multi-day events", "Load planning for large setups"]
+    },
+    {
+      type: "Logistics", title: "Travel Management & Other Logistics",
+      desc: "End-to-end movement support for delegations and speakers — from the airport to the venue and back.",
+      list: ["Flight and hotel bookings", "Airport transfers and meet-and-greet", "Delegate movement planning", "Courier and freight support"]
+    },
+    {
+      type: "Infrastructure", title: "Tent Services",
+      desc: "Pagoda and stretch tents installed by a certified crew, complete with the flooring and lighting to make them event-ready.",
+      list: ["Pagoda tents from 3x3m to 10x10m", "Stretch tents for open-air events", "Flooring, carpets and sidewalls", "Certified installation and dismantling"]
+    },
+    {
+      type: "Technical", title: "Sound System",
+      desc: "PA systems tuned to your venue with engineers who stay on the desk from soundcheck to the last speech.",
+      list: ["PA and line-array systems", "Wired and wireless microphones", "Mixing desk and sound engineers", "Soundcheck before doors open"]
+    },
+    {
+      type: "Staffing", title: "Ushers",
+      desc: "Trained, briefed hosts who receive your guests, guide them to their seats and keep the front-of-house running warmly.",
+      list: ["Trained ushers and hosts", "Guest guidance and seating", "Protocol support for VIP arrivals", "Briefed on your programme and layout"]
+    },
+    {
+      type: "Hospitality", title: "Event Catering",
+      desc: "From coffee breaks to full banquets — menus planned, staffed and served to match the tone of your event.",
+      list: ["Menu planning and tasting", "Coffee breaks and cocktail service", "Full banquet service", "Serving staff and equipment"]
+    },
+    {
+      type: "Travel", title: "Travel Agency",
+      desc: "A full travel desk for your organisation: ticketing, visa support and itineraries for individuals or whole delegations.",
+      list: ["Flight ticketing", "Visa application support", "Itinerary planning", "Group travel arrangements"]
+    }
+  ];
+
+  var WA_NUMBER = "250788647027";
+  var modal = document.getElementById("svModal");
+  var current = null;
+
+  function openService(i) {
+    var s = SERVICES[i];
+    if (!s) return;
+    current = s;
+    document.getElementById("svType").textContent = s.type;
+    document.getElementById("svTitle").textContent = s.title;
+    document.getElementById("svDesc").textContent = s.desc;
+    document.getElementById("svList").innerHTML = s.list.map(function (li) {
+      return "<li>" + li + "</li>";
+    }).join("");
+    document.getElementById("svWa").href = "https://wa.me/" + WA_NUMBER + "?text=" +
+      encodeURIComponent("Hello CD Business Group, I would like to know more about your service: " + s.title + ".");
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeService() {
+    modal.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  var cards = document.querySelectorAll(".services-editorial-register__grid .services-editorial-item");
+  cards.forEach(function (card, i) {
+    card.classList.add("sv-live");
+    var more = document.createElement("span");
+    more.className = "sv-more";
+    more.textContent = "View details";
+    card.querySelector(".services-editorial-item__body").appendChild(more);
+    card.addEventListener("click", function () { openService(i); });
+  });
+
+  modal.querySelectorAll("[data-sv-close]").forEach(function (el) {
+    el.addEventListener("click", closeService);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modal.classList.contains("open")) closeService();
+  });
+
+  document.getElementById("svRequest").addEventListener("click", function () {
+    var s = current;
+    closeService();
+    if (window.CDQuoteModal) {
+      CDQuoteModal.open("Full event setup");
+      var msg = document.getElementById("qmMsg");
+      if (msg && s) msg.value = "I am interested in: " + s.title;
+    }
+  });
+})();
+</script>
 </body>
 </html>

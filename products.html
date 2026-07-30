@@ -30,27 +30,22 @@
     <a class="nav-btn" href="about.html">About Us</a>
     <a class="nav-btn" href="clients.html">Our Clients</a>
     <a class="nav-btn" href="contact.html">Contact</a>
+    <button class="nav-cta js-quote-open" type="button">Plan &amp; Get a Quote</button>
   </div>
 </nav>
 
 <main>
   <!-- HERO -->
   <header class="cat-hero">
-    <span class="eyebrow-dot" style="color:#ff8080;">2026 Collection &middot; 40+ Product Lines</span>
+    <span class="eyebrow-dot" style="color:var(--gold);">2026 Collection &middot; 40+ Product Lines</span>
     <h1>Events &amp; Exhibitions<br>Product Catalogue</h1>
     <p>
       Every product below is held in our Kigali warehouse and ready to deliver — VIP and VVIP seating,
       event tables, shell scheme booths, pagoda tents, AV equipment and more.
       Add items to your quote list and send it to us on WhatsApp in under a minute.
     </p>
-    <div class="cat-hero__meta">
-      <span class="meta-pill"><b>Free</b>&nbsp;delivery in Kigali</span>
-      <span class="meta-pill"><b>18% VAT</b>&nbsp;inclusive pricing</span>
-      <span class="meta-pill"><b>Per-day</b>&nbsp;rates, discounts 2+ days</span>
-      <span class="meta-pill"><b>East Africa</b>&nbsp;coverage</span>
-    </div>
     <div class="cat-hero__meta" style="margin-top:18px;">
-      <a class="btn2 btn2--red" href="assets/CD-Business-Catalogue-2026.pdf" download>Download PDF Catalogue</a>
+      <a class="btn2 btn2--navy" href="assets/CD-Business-Catalogue-2026.pdf" download>Download PDF Catalogue</a>
       <button class="btn2 btn2--ghost js-open-quote" style="border-color:#fff;color:#fff;">View My Quote List</button>
     </div>
   </header>
@@ -70,14 +65,6 @@
     <div class="pgrid" id="productGrid"></div>
   </section>
 
-  <!-- TERMS STRIP -->
-  <section class="terms-strip">
-    <div class="term"><div class="term__ic">&#128666;</div><div><b>Free Delivery &amp; Setup</b><small>Transport is complementary. Delivery and professional setup for local and regional events.</small></div></div>
-    <div class="term"><div class="term__ic">&#128197;</div><div><b>Per-Day Pricing</b><small>Prices are per day with discounts for bookings longer than 2 days. Booth prices cover 3 days.</small></div></div>
-    <div class="term"><div class="term__ic">&#9989;</div><div><b>18% VAT Inclusive</b><small>Quotations are structured, written and tax inclusive. Same price for local and international events.</small></div></div>
-    <div class="term"><div class="term__ic">&#128179;</div><div><b>Easy Payment</b><small>MTN MoMo Pay 2225255 &middot; BPR Bank account 4491855277 (CD Business Group Ltd).</small></div></div>
-  </section>
-
   <!-- CTA -->
   <div class="cta2">
     <div>
@@ -85,7 +72,6 @@
       <p>Send us the venue, date and guest count — we will recommend the full setup and quote it within 2 hours.</p>
     </div>
     <div class="cta2__btns">
-      <a class="btn2 btn2--white" href="https://wa.me/250788647027?text=Hello%20CD%20Business%20Group%2C%20I%20need%20advice%20on%20equipment%20for%20my%20event." target="_blank" rel="noopener">WhatsApp an Expert</a>
       <a class="btn2 btn2--ghost" href="contact.html">Send Full Brief</a>
     </div>
   </div>
@@ -107,7 +93,6 @@
       <table class="spec-table">
         <tr><td>Size</td><td id="pmSize"></td></tr>
         <tr><td>Colours</td><td id="pmColors"></td></tr>
-        <tr><td>Stock</td><td id="pmStock"></td></tr>
       </table>
       <div class="pmodal__qty">
         <label for="pmQty">Quantity</label>
@@ -118,7 +103,7 @@
         </div>
       </div>
       <div class="pmodal__actions">
-        <button class="btn2 btn2--red" id="pmAdd">Add to Quote List</button>
+        <button class="btn2 btn2--navy" id="pmAdd">Add to Quote List</button>
         <a class="btn2 btn2--wa" id="pmWa" target="_blank" rel="noopener">Ask on WhatsApp</a>
       </div>
       <p class="pmodal__note">Rates are per day, 18% VAT inclusive, with free delivery in Kigali. Add to your quote list to request pricing for all items at once.</p>
@@ -170,6 +155,7 @@
 
 <script src="assets/data/products.js"></script>
 <script src="assets/js/quote.js"></script>
+<script src="assets/js/quote-modal.js"></script>
 <script src="script.js"></script>
 <script>
 (function () {
@@ -196,11 +182,6 @@
       return '<button class="chip' + (c.key === activeCat ? " active" : "") + '" data-cat="' + c.key + '">' +
         c.label + ' (' + (m[c.key] || 0) + ')</button>';
     }).join("");
-  }
-
-  function stockBadge(p) {
-    if (p.stock <= 5) return '<span class="pcard__stock pcard__stock--low">Limited &middot; ' + p.stock + '</span>';
-    return '<span class="pcard__stock">In stock &middot; ' + p.stock + '</span>';
   }
 
   var COLOR_HEX = {
@@ -235,7 +216,7 @@
       return '<article class="pcard">' +
         '<div class="pcard__img" data-open="' + p.code + '">' +
           '<img src="assets/products/' + p.imgs[0] + '" alt="' + p.name + '" loading="lazy">' +
-          '<span class="pcard__code">' + p.code + '</span>' + stockBadge(p) +
+          '<span class="pcard__code">' + p.code + '</span>' +
         '</div>' +
         '<div class="pcard__body">' +
           '<h3 class="pcard__name">' + p.name + '</h3>' +
@@ -265,7 +246,6 @@
     document.getElementById("pmDesc").textContent = p.desc + (p.note ? " Note: " + p.note + "." : "");
     document.getElementById("pmSize").textContent = p.size;
     document.getElementById("pmColors").textContent = p.colors.join(", ");
-    document.getElementById("pmStock").textContent = p.stock + " units available";
     document.getElementById("pmQty").value = 1;
     setImage(0);
     var thumbs = document.getElementById("pmThumbs");
@@ -354,6 +334,7 @@
   renderGrid();
   applyHash();
 })();
+
 </script>
 </body>
 </html>
