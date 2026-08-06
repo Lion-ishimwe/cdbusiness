@@ -1,5 +1,5 @@
 /* ============================================================
-   CD Business Group — quote.js
+   CD Business Group - quote.js
    Site-wide quote basket: localStorage cart, floating button,
    slide-in drawer, WhatsApp / email enquiry composer.
    Requires assets/data/products.js when product images are shown.
@@ -107,7 +107,7 @@
 
     if (!basket.items.length) {
       itemsEl.innerHTML = '<div class="qdrawer__empty">Your quote list is empty.<br>' +
-        'Browse the <a href="products.html" style="color:var(--red);font-weight:700;">product catalogue</a> and tap ' +
+        'Browse the <a href="products.html" style="color:var(--red);font-weight:700;">Furniture catalogue</a> and tap ' +
         '<b>Add to Quote</b> on anything you need.</div>';
       return;
     }

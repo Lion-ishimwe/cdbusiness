@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Product Catalogue 2026 - CD Business Group Ltd | Event Furniture, Booths &amp; Tents Rwanda</title>
+<title>Furniture Catalogue 2026 - CD Business Group Ltd | Event Furniture, Booths &amp; Tents Rwanda</title>
 <meta name="description" content="Browse 40+ rental products: VIP &amp; VVIP seating, event tables, shell scheme exhibition booths, pagoda tents, stage lights, smart TVs and portable washrooms. Free delivery in Kigali, 18% VAT inclusive.">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700;800;900&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -38,9 +38,9 @@
   <!-- HERO -->
   <header class="cat-hero">
     <span class="eyebrow-dot" style="color:var(--gold);">2026 Collection &middot; 40+ Product Lines</span>
-    <h1>Events &amp; Exhibitions<br>Product Catalogue</h1>
+    <h1>Events &amp; Exhibitions<br>Furniture Catalogue</h1>
     <p>
-      Every product below is held in our Kigali warehouse and ready to deliver — VIP and VVIP seating,
+      Every product below is held in our Kigali warehouse and ready to deliver, VIP and VVIP seating,
       event tables, shell scheme booths, pagoda tents, AV equipment and more.
       Add items to your quote list and send it to us on WhatsApp in under a minute.
     </p>
@@ -59,6 +59,7 @@
     </div>
     <span class="toolbar__count" id="countLabel"></span>
   </div>
+  <div class="subbar" id="subChipRow" hidden></div>
 
   <!-- GRID -->
   <section class="pgrid-wrap">
@@ -69,7 +70,7 @@
   <div class="cta2">
     <div>
       <h2>Not sure what your event needs?</h2>
-      <p>Send us the venue, date and guest count — we will recommend the full setup and quote it within 2 hours.</p>
+      <p>Send us the venue, date and guest count, we will recommend the full setup and quote it within 2 hours.</p>
     </div>
     <div class="cta2__btns">
       <a class="btn2 btn2--ghost" href="contact.html">Send Full Brief</a>
@@ -125,7 +126,7 @@
       <h4>Quick Links</h4>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Product Catalogue</a></li>
+        <li><a href="products.html">Furniture Catalogue</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -165,10 +166,44 @@
   var searchBox = document.getElementById("searchBox");
   var countLabel = document.getElementById("countLabel");
   var activeCat = "all";
+  var activeSub = "all";
   var query = "";
 
   var CAT_LABEL = {};
   CD_CATEGORIES.forEach(function (c) { CAT_LABEL[c.key] = c.label; });
+
+  /* table sub-categories */
+  var subChipRow = document.getElementById("subChipRow");
+  var TABLE_SUBS = [
+    { key: "all", label: "All Tables" },
+    { key: "tables", label: "Tables" },
+    { key: "high", label: "High Tables" },
+    { key: "side", label: "Side Tables" }
+  ];
+  var TABLE_SUB_MAP = {
+    "CD019": "tables", "CD019-R": "tables",
+    "CD014": "high", "CD023": "high", "CD024": "high", "CD027": "high"
+  };
+  function tableSub(p) { return TABLE_SUB_MAP[p.code] || "side"; }
+
+  function renderSubChips() {
+    if (activeCat !== "tables") {
+      subChipRow.hidden = true;
+      subChipRow.innerHTML = "";
+      return;
+    }
+    var m = { all: 0, tables: 0, high: 0, side: 0 };
+    CD_PRODUCTS.forEach(function (p) {
+      if (p.cat !== "tables") return;
+      m.all++;
+      m[tableSub(p)]++;
+    });
+    subChipRow.innerHTML = TABLE_SUBS.map(function (s) {
+      return '<button class="chip chip--sub' + (s.key === activeSub ? " active" : "") + '" data-sub="' + s.key + '">' +
+        s.label + ' (' + m[s.key] + ')</button>';
+    }).join("");
+    subChipRow.hidden = false;
+  }
 
   function counts() {
     var m = { all: CD_PRODUCTS.length };
@@ -200,6 +235,7 @@
 
   function matches(p) {
     if (activeCat !== "all" && p.cat !== activeCat) return false;
+    if (activeCat === "tables" && activeSub !== "all" && tableSub(p) !== activeSub) return false;
     if (!query) return true;
     var hay = (p.name + " " + p.code + " " + p.desc + " " + CAT_LABEL[p.cat]).toLowerCase();
     return query.toLowerCase().split(/\s+/).every(function (t) { return hay.indexOf(t) > -1; });
@@ -289,11 +325,21 @@
   });
 
   /* ---------- events ---------- */
+  subChipRow.addEventListener("click", function (e) {
+    var chip = e.target.closest("button[data-sub]");
+    if (!chip) return;
+    activeSub = chip.getAttribute("data-sub");
+    renderSubChips();
+    renderGrid();
+  });
+
   chipRow.addEventListener("click", function (e) {
     var chip = e.target.closest(".chip");
     if (!chip) return;
     activeCat = chip.getAttribute("data-cat");
+    activeSub = "all";
     renderChips();
+    renderSubChips();
     renderGrid();
   });
   searchBox.addEventListener("input", function () {
@@ -322,7 +368,7 @@
     if (!h) return;
     if (h.indexOf("cat=") === 0) {
       var k = h.slice(4);
-      if (CAT_LABEL[k]) { activeCat = k; renderChips(); renderGrid(); }
+      if (CAT_LABEL[k]) { activeCat = k; activeSub = "all"; renderChips(); renderSubChips(); renderGrid(); }
     } else {
       var p = byCode(h.toUpperCase());
       if (p) openModal(p.code);

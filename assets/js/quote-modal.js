@@ -1,5 +1,5 @@
 /* ============================================================
-   CD Business Group — quote-modal.js
+   CD Business Group - quote-modal.js
    Site-wide "Request a Quote" modal: injected on every page,
    opened by any element with class .js-quote-open.
    Shares event context (name / date / venue / type) with the
@@ -33,7 +33,7 @@
           '<p class="qmodal__sub">Share a few details and we’ll come back to you with a written quotation.</p>' +
           '<form id="quoteForm" novalidate>' +
             '<div class="qmodal__grid">' +
-              '<label>Name / Company *<input type="text" id="qmName" autocomplete="name" placeholder="e.g. Jane — Acme Ltd"></label>' +
+              '<label>Name / Company *<input type="text" id="qmName" autocomplete="name" placeholder="e.g. Jane - Acme Ltd"></label>' +
               '<label>Phone / WhatsApp *<input type="tel" id="qmPhone" autocomplete="tel" placeholder="+250 7xx xxx xxx"></label>' +
               '<label>Email<input type="email" id="qmEmail" autocomplete="email" placeholder="you@company.com"></label>' +
               '<label>Event date<input type="text" id="qmDate" placeholder="e.g. 15 Aug 2026"></label>' +

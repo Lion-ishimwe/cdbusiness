@@ -1153,7 +1153,7 @@ body.nav-open {
   padding: 5px 0;
   display: flex; align-items: center; gap: 8px;
 }
-.booth-includes li::before { content: '—'; color: var(--red); }
+.booth-includes li::before { content: '›'; color: var(--red); }
 .booth-note {
   font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
   color: var(--red); text-transform: uppercase; margin-top: 20px;

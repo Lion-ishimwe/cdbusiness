@@ -1,4 +1,4 @@
-// CD Business Group Ltd — 2026 Catalogue data (extracted from official catalogue)
+// CD Business Group Ltd - 2026 Catalogue data (extracted from official catalogue)
 // Categories: vip, chairs, tables, booths, tents, av, accessories, sanitation
 const CD_CATEGORIES = [
   { key: "all", label: "All Products" },
@@ -15,7 +15,7 @@ const CD_CATEGORIES = [
 const CD_PRODUCTS = [
   {
     code: "CD001", name: "Foldable Consultation Counter", cat: "booths",
-    desc: "Shell scheme counter made of aluminium frames and white laminated plywood. Available simple or lockable — ideal reception desk for exhibition stands.",
+    desc: "Shell scheme counter made of aluminium frames and white laminated plywood. Available simple or lockable, ideal reception desk for exhibition stands.",
     size: "100L x 50W x 100H cm", colors: ["White"], stock: 100,
     imgs: ["cd001-counter.jpg", "cd001-counter-back.jpg"]
   },
@@ -26,43 +26,43 @@ const CD_PRODUCTS = [
     imgs: ["cd002-brochure-rack.jpg"]
   },
   {
-    code: "CD003", name: "Standard Chair — Type 1", cat: "chairs",
+    code: "CD003", name: "Standard Chair - Type 1", cat: "chairs",
     desc: "White standard event chair with resin PP shell, cushioned seat and solid wood legs. A clean Scandinavian look for conferences and meetings.",
     size: "45 x 47 x H80 cm", colors: ["White"], stock: 300,
     imgs: ["cd003-chair-type1.jpg"]
   },
   {
-    code: "CD004", name: "Stacking Chair — Type 2", cat: "chairs",
+    code: "CD004", name: "Stacking Chair - Type 2", cat: "chairs",
     desc: "PU upholstered stacking chair with comfortable seat cushion and strong chrome frame. Our workhorse seat for large conferences.",
     size: "40L x 32H x 46W", colors: ["Black"], stock: 1000,
     imgs: ["cd004-chair-type2.jpg"]
   },
   {
-    code: "CD005", name: "Adjustable Bar Stool — Type 1", cat: "chairs",
+    code: "CD005", name: "Adjustable Bar Stool - Type 1", cat: "chairs",
     desc: "High quality gas-lift bar stool with glossy moulded seat and chrome trumpet base. Height adjustable for cocktail setups.",
     size: "D38 x SD44 x SH58–78 cm", colors: ["White", "Black"], stock: 60,
     imgs: ["cd005-bar-stool-t1-black.jpg", "cd005-bar-stool-t1-white.jpg"]
   },
   {
-    code: "CD006", name: "Adjustable Bar Stool — Type 2", cat: "chairs",
+    code: "CD006", name: "Adjustable Bar Stool - Type 2", cat: "chairs",
     desc: "Quilted high-back PU bar stool with comfortable seat cushion, strong chrome leg and footrest. Adds a premium touch to bar tables.",
     size: "50L x 112H x 50W", colors: ["Black"], stock: 50,
     imgs: ["cd006-bar-stool-t2.jpg"]
   },
   {
     code: "CD007", name: "VIP Lounge Chair", cat: "vip",
-    desc: "Adjustable height VIP tub chair in iron and PU leather on a polished chrome base. Swivels 360° — perfect for lounges and panel talks.",
+    desc: "Adjustable height VIP tub chair in iron and PU leather on a polished chrome base. Swivels 360°, perfect for lounges and panel talks.",
     size: "55L x 45H x 50W", colors: ["White", "Black"], stock: 40,
     imgs: ["cd007-vip-chair.jpg"]
   },
   {
-    code: "CD008", name: "VVIP Armchair — Leather", cat: "vip",
+    code: "CD008", name: "VVIP Armchair - Leather", cat: "vip",
     desc: "Iconic swan-style VVIP armchair in PU leather with silver 4-star base. Height adjustable (44–58 cm) with full 360° swivel.",
     size: "47 x 70 x H61–82 cm", colors: ["White", "Black"], stock: 20,
     imgs: ["cd008-vvip-armchair-leather.jpg", "cd008-vvip-armchair-leather-black.jpg"]
   },
   {
-    code: "CD009", name: "VVIP Armchair — Velvet", cat: "vip",
+    code: "CD009", name: "VVIP Armchair - Velvet", cat: "vip",
     desc: "Swan-style VVIP armchair upholstered in soft velvet with silver leg. The signature seat for head tables and VVIP lounges.",
     size: "47 x 70 x H61–82 cm", colors: ["Cream", "Black"], stock: 20,
     imgs: ["cd009-vvip-armchair-velvet.jpg", "cd009-vvip-armchair-velvet-black.jpg"]
@@ -117,7 +117,7 @@ const CD_PRODUCTS = [
   },
   {
     code: "CD018", name: "High Bar Chair", cat: "chairs",
-    desc: "Fan-back polypropylene high bar chair. Light, stackable and weather friendly — great for outdoor cocktail setups.",
+    desc: "Fan-back polypropylene high bar chair. Light, stackable and weather friendly, great for outdoor cocktail setups.",
     size: "44.5 x 49 x H106 cm (seat 75 cm)", colors: ["White", "Black"], stock: 60,
     imgs: ["cd018-high-bar-chair.jpg"]
   },
@@ -165,7 +165,7 @@ const CD_PRODUCTS = [
   },
   {
     code: "CD023", name: "Glass High Table", cat: "tables",
-    desc: "Clear glass high table with chrome pillar and trumpet base — pairs with bar stools for standing meetings.",
+    desc: "Clear glass high table with chrome pillar and trumpet base, pairs with bar stools for standing meetings.",
     size: "H70 x W60 cm", colors: ["Clear/Silver"], stock: 10,
     imgs: ["cd023-glass-high-table.jpg"]
   },
@@ -183,7 +183,7 @@ const CD_PRODUCTS = [
   },
   {
     code: "CD026", name: "White Glass Table", cat: "tables",
-    desc: "Round white glass table on chrome trumpet base — bright, clean surface for reception areas.",
+    desc: "Round white glass table on chrome trumpet base, bright, clean surface for reception areas.",
     size: "D50 x H50 cm", colors: ["White/Silver"], stock: 30,
     imgs: ["cd026-glass-table-white.jpg"]
   },
@@ -238,13 +238,13 @@ const CD_PRODUCTS = [
   },
   {
     code: "CD035", name: "Stage Lights", cat: "av",
-    desc: "LED par stage lights — RGB and warm white — for stages, booths and evening events. Indoor and outdoor rated units.",
+    desc: "LED par stage lights, RGB and warm white, for stages, booths and evening events. Indoor and outdoor rated units.",
     size: "LED par cans", colors: ["RGB"], stock: 50,
     imgs: ["cd035-stage-lights.jpg"]
   },
   {
     code: "CD036", name: "Pagoda Aluminium Tent 3x3m", cat: "tents",
-    desc: "Pagoda tent with 63x63mm extruded aluminium frame (6061/T6), heavy duty 850g/sqm white PVC roof and sides — blockout, waterproof, fireproof (DIN4012 B1, M2), UV resistant.",
+    desc: "Pagoda tent with 63x63mm extruded aluminium frame (6061/T6), heavy duty 850g/sqm white PVC roof and sides, blockout, waterproof, fireproof (DIN4012 B1, M2), UV resistant.",
     size: "3m x 3m", colors: ["White"], stock: 4,
     imgs: ["cd036-pagoda-3x3.jpg"]
   },
@@ -261,7 +261,7 @@ const CD_PRODUCTS = [
     imgs: ["cd038-pagoda-10x10.jpg"]
   },
   {
-    code: "CD039", name: "Pagoda Tent 10x10m — Transparent", cat: "tents",
+    code: "CD039", name: "Pagoda Tent 10x10m - Transparent", cat: "tents",
     desc: "Statement 10x10m pagoda with 950gsm transparent PVC roof cover. Daylight ambience with the same aluminium frame strength.",
     size: "10m x 10m", colors: ["Transparent"], stock: 2,
     imgs: ["cd039-pagoda-transparent.jpg"]
@@ -280,7 +280,7 @@ const CD_PRODUCTS = [
   },
   {
     code: "CD042", name: "Artificial Grass Carpet", cat: "accessories",
-    desc: "Artificial grass carpet rolls — 25mm pile, PP+PE, density 16800, net+SBR backing. Green, white and red available.",
+    desc: "Artificial grass carpet rolls, 25mm pile, PP+PE, density 16800, net+SBR backing. Green, white and red available.",
     size: "4m x 25m rolls", colors: ["Green", "White", "Red"], stock: 17,
     imgs: ["cd042-carpet-grey.jpg", "cd042-carpet-red.jpg"]
   },
