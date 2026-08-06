@@ -297,6 +297,7 @@
   <div class="qmodal__backdrop" data-sv-close></div>
   <div class="qmodal__panel">
     <button class="qmodal__close" type="button" data-sv-close aria-label="Close">&times;</button>
+    <img class="svmodal__img" id="svImg" src="" alt="">
     <span class="qmodal__eyebrow" id="svType"></span>
     <h2 id="svTitle"></h2>
     <p class="qmodal__sub" id="svDesc"></p>
@@ -325,76 +326,91 @@
   var SERVICES = [
     {
       type: "Planning", title: "Venue Selection and Negotiation",
+      img: "assets/blogs/1.jpg", imgAlt: "Event grounds at BK Arena with pagoda tents and seating",
       desc: "We scout venues that fit your audience, budget and technical needs, then negotiate rates and terms on your behalf so you get the right space at the right price.",
       list: ["Venue shortlists with site visits", "Capacity and layout assessment", "Rate negotiation and contracting", "Liaison with venue management until event day"]
     },
     {
       type: "Administration", title: "Event Secretariat Services",
+      img: "assets/products/cd001-counter.jpg", imgAlt: "Consultation counter used as a secretariat desk",
       desc: "A dedicated secretariat that runs the paperwork and communication engine of your event, before, during and after.",
       list: ["Delegate correspondence and RSVP tracking", "Programme and agenda management", "Document preparation and minutes", "Staffed secretariat desk on site"]
     },
     {
       type: "Management", title: "Event Registration & Budget Management",
+      img: "assets/products/cd029-booth-photo.jpg", imgAlt: "Registration booth with counter and chairs",
       desc: "Smooth guest check-in and clear control of what the event spends, with reporting you can hand to your finance team.",
       list: ["Online and on-site registration", "Badges, guest lists and check-in desks", "Budget planning and expenditure tracking", "Supplier coordination and reconciliation"]
     },
     {
       type: "Experience", title: "Event Decor",
+      img: "assets/blogs/1.1.jpg", imgAlt: "Styled garden reception with string lights and cocktail tables",
       desc: "Concept-to-teardown styling that turns a venue into your brand's space, stages, draping, florals and themed setups.",
       list: ["Decor concepts and mood boards", "Stage and backdrop styling", "Floral, table and entrance styling", "Full setup and teardown by our crew"]
     },
     {
       type: "Technical", title: "Audio Visual Services",
+      img: "assets/blogs/2.jpeg", imgAlt: "Large LED screen and stage with show lighting",
       desc: "Speakers, projection and LED screens delivered, rigged and operated by our technicians so every seat sees and hears clearly.",
       list: ["LED screens and projection", "PA systems and microphones", "Live switching and playback", "On-site AV technicians throughout"]
     },
     {
       type: "Production", title: "Lighting & Stage Packages",
+      img: "assets/blogs/01.jpg", imgAlt: "Dressed stage with seating and lighting at a symposium",
       desc: "Stage builds and lighting rigs sized to your venue and programme, from a simple podium wash to full show lighting.",
       list: ["Stage design and build", "Ambient and stage lighting", "Trussing and rigging", "Show operation on event day"]
     },
     {
       type: "Atmosphere", title: "Photography, Confetti & Smoke Machine",
+      img: "assets/blogs/6.jpg", imgAlt: "Fireworks over the Kigali Convention Centre at night",
       desc: "The moments layer: professional coverage of your event plus the effects that make key moments land.",
       list: ["Professional event photography", "Confetti moments for reveals and awards", "Smoke and haze effects", "Coordination with your programme's key moments"]
     },
     {
       type: "Branding", title: "Print Material Design & Production",
+      img: "assets/blogs/6.1.jpg", imgAlt: "Booths with printed fascia branding at an outdoor expo",
       desc: "Design and production of everything printed at your event, done as one consistent brand package.",
       list: ["Artwork and layout design", "Large-format banners and backdrops", "Badges, programmes and signage", "Delivery and installation at the venue"]
     },
     {
       type: "Logistics", title: "Transportation",
+      img: "Clients/Truck.png", imgAlt: "CD Business Group delivery truck",
       desc: "Our own trucks and drivers move equipment and materials, collected, delivered and returned on schedule.",
       list: ["Equipment trucking and handling", "Scheduled delivery and collection", "Inter-venue transfers during multi-day events", "Load planning for large setups"]
     },
     {
       type: "Logistics", title: "Travel Management & Other Logistics",
+      img: "assets/blogs/48.JPG", imgAlt: "International event grandstand hosted in Rwanda",
       desc: "End-to-end movement support for delegations and speakers, from the airport to the venue and back.",
       list: ["Flight and hotel bookings", "Airport transfers and meet-and-greet", "Delegate movement planning", "Courier and freight support"]
     },
     {
       type: "Infrastructure", title: "Tent Services",
+      img: "assets/blogs/4.1.jpg", imgAlt: "Crew installing transparent pagoda tents at the Kigali Convention Centre",
       desc: "Pagoda and stretch tents installed by a certified crew, complete with the flooring and lighting to make them event-ready.",
       list: ["Pagoda tents from 3x3m to 10x10m", "Stretch tents for open-air events", "Flooring, carpets and sidewalls", "Certified installation and dismantling"]
     },
     {
       type: "Technical", title: "Sound System",
+      img: "assets/blogs/2.jpeg", imgAlt: "Stage with speakers and screens ready for a live programme",
       desc: "PA systems tuned to your venue with engineers who stay on the desk from soundcheck to the last speech.",
       list: ["PA and line-array systems", "Wired and wireless microphones", "Mixing desk and sound engineers", "Soundcheck before doors open"]
     },
     {
       type: "Staffing", title: "Ushers",
+      img: "assets/products/cd041-stanchions.jpg", imgAlt: "Stanchions and velvet rope for guest guidance",
       desc: "Trained, briefed hosts who receive your guests, guide them to their seats and keep the front-of-house running warmly.",
       list: ["Trained ushers and hosts", "Guest guidance and seating", "Protocol support for VIP arrivals", "Briefed on your programme and layout"]
     },
     {
       type: "Hospitality", title: "Event Catering",
+      img: "assets/blogs/5.jpeg", imgAlt: "Lounge tables and seating prepared inside a large event tent",
       desc: "From coffee breaks to full banquets, menus planned, staffed and served to match the tone of your event.",
       list: ["Menu planning and tasting", "Coffee breaks and cocktail service", "Full banquet service", "Serving staff and equipment"]
     },
     {
       type: "Travel", title: "Travel Agency",
+      img: "assets/blogs/3.jpeg", imgAlt: "Airline exhibition stand with a world route map",
       desc: "A full travel desk for your organisation: ticketing, visa support and itineraries for individuals or whole delegations.",
       list: ["Flight ticketing", "Visa application support", "Itinerary planning", "Group travel arrangements"]
     }
@@ -408,6 +424,9 @@
     var s = SERVICES[i];
     if (!s) return;
     current = s;
+    var img = document.getElementById("svImg");
+    img.src = s.img || "";
+    img.alt = s.imgAlt || s.title;
     document.getElementById("svType").textContent = s.type;
     document.getElementById("svTitle").textContent = s.title;
     document.getElementById("svDesc").textContent = s.desc;

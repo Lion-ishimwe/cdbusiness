@@ -1572,6 +1572,14 @@ nav.nav--clear.scrolled { background: var(--navy-deep); }
 .services-editorial-item.sv-live:hover .sv-more { opacity: 1; color: var(--navy-deep); }
 
 .svmodal .qmodal__panel { max-width: 560px; }
+.svmodal__img {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background: #F2F5F9;
+}
 .svmodal__includes { margin-top: 6px; }
 .svmodal__includes-label {
   display: block;
