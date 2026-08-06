@@ -224,6 +224,7 @@
 </button>
 
 <script src="assets/data/products.js"></script>
+<script src="assets/js/mailer.js"></script>
 <script src="assets/js/quote.js"></script>
 <script src="assets/js/quote-modal.js"></script>
 <script src="script.js"></script>
@@ -264,9 +265,32 @@
   });
   document.getElementById("bfSendMail").addEventListener("click", function () {
     if (!validate()) return;
-    window.location.href = "mailto:" + EMAIL +
-      "?subject=" + encodeURIComponent("Event enquiry - " + val("bfService")) +
-      "&body=" + encodeURIComponent(compose());
+    var btn = this;
+    var subject = "Event enquiry - " + val("bfService");
+    if (window.CDMail) {
+      btn.disabled = true;
+      btn.textContent = "Sending...";
+      CDMail.send({
+        subject: subject,
+        name: val("bfName"),
+        phone: val("bfPhone"),
+        message: compose()
+      }).then(function () {
+        document.getElementById("briefForm").reset();
+        CDMail.success("Your email was sent successfully. We will get back to you shortly.");
+      }).catch(function () {
+        window.location.href = "mailto:" + EMAIL +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(compose());
+      }).finally(function () {
+        btn.disabled = false;
+        btn.textContent = "Send via Email";
+      });
+    } else {
+      window.location.href = "mailto:" + EMAIL +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(compose());
+    }
   });
 })();
 </script>

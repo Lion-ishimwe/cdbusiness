@@ -226,10 +226,32 @@
     });
     document.getElementById("qSendMail").addEventListener("click", function () {
       if (!basket.items.length) { toast("Add products to your quote list first"); return; }
+      var btn = this;
       var subject = "Quotation request - " + basket.count() + " item(s) from website catalogue";
-      window.location.href = "mailto:" + EMAIL +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(composeMessage());
+      var name = (document.getElementById("qName") || {}).value || "";
+      if (window.CDMail) {
+        btn.disabled = true;
+        btn.textContent = "Sending...";
+        CDMail.send({
+          subject: subject,
+          name: name,
+          message: composeMessage()
+        }).then(function () {
+          openDrawer(false);
+          CDMail.success("Your quote request was sent successfully. We will reply with pricing shortly.");
+        }).catch(function () {
+          window.location.href = "mailto:" + EMAIL +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(composeMessage());
+        }).finally(function () {
+          btn.disabled = false;
+          btn.textContent = "Send via Email";
+        });
+      } else {
+        window.location.href = "mailto:" + EMAIL +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(composeMessage());
+      }
     });
 
     document.addEventListener("keydown", function (e) {

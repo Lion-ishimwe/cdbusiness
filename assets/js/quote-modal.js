@@ -159,11 +159,36 @@
 
     document.getElementById("qmSendMail").addEventListener("click", function () {
       if (!validate()) return;
+      var btn = this;
       var subject = "Quotation request from the website - " + val("qmName");
-      window.location.href = "mailto:" + EMAIL +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(composeMessage());
-      closeModal();
+      if (window.CDMail) {
+        btn.disabled = true;
+        btn.textContent = "Sending...";
+        CDMail.send({
+          subject: subject,
+          name: val("qmName"),
+          email: val("qmEmail"),
+          phone: val("qmPhone"),
+          message: composeMessage()
+        }).then(function () {
+          closeModal();
+          CDMail.success("Your email was sent successfully. We will get back to you with a written quotation shortly.");
+        }).catch(function () {
+          // relay unavailable: fall back to the visitor's email app
+          window.location.href = "mailto:" + EMAIL +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(composeMessage());
+          closeModal();
+        }).finally(function () {
+          btn.disabled = false;
+          btn.textContent = "Send via Email";
+        });
+      } else {
+        window.location.href = "mailto:" + EMAIL +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(composeMessage());
+        closeModal();
+      }
     });
   });
 

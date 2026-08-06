@@ -788,6 +788,63 @@ nav.nav--clear.scrolled { background: var(--navy-deep); }
   .cd-side-btn { padding: 15px 9px; font-size: 0.68rem; }
 }
 
+/* Email-sent success popup */
+.mailpop {
+  position: fixed;
+  inset: 0;
+  z-index: 2700;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+}
+.mailpop.open { display: flex; }
+.mailpop__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 6, 58, 0.55);
+  backdrop-filter: blur(3px);
+  animation: qmFade 0.22s ease;
+}
+.mailpop__panel {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 34px 30px 30px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  animation: qmRise 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.mailpop__check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.14);
+  color: #0d7a3c;
+  margin-bottom: 14px;
+}
+.mailpop__check svg { width: 30px; height: 30px; }
+.mailpop__panel h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--navy-deep);
+  margin-bottom: 8px;
+}
+.mailpop__panel p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba(3, 6, 58, 0.65);
+  margin-bottom: 20px;
+}
+
 /* Full-image modal (company profile) */
 .imodal {
   position: fixed;
