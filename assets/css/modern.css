@@ -789,6 +789,13 @@ nav.nav--clear.scrolled { background: var(--navy-deep); }
   .cd-side-btn { padding: 15px 9px; font-size: 0.68rem; }
 }
 
+/* Moments gallery: explore-more */
+.work-tile.is-hidden { display: none; }
+.work__more {
+  text-align: center;
+  padding: 26px 0 10px;
+}
+
 /* Email-sent success popup */
 .mailpop {
   position: fixed;
