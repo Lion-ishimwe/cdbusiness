@@ -137,7 +137,7 @@ const CD_PRODUCTS = [
     code: "CD014", name: "Trade Show Table", cat: "tables",
     desc: "Adjustable-height trade show table with ABS top and iron leg. Twist to raise from café height to cocktail height.",
     size: "D60 x H68–92 cm", colors: ["Black", "White"], stock: 10,
-    imgs: ["cd014-trade-show-table.jpg"]
+    imgs: ["cd014-trade-show-table.jpg", "cd014-trade-show-table-black.jpeg"]
   },
   {
     code: "CD015", name: "Wooden Bar Stool", cat: "chairs",
@@ -313,6 +313,36 @@ const CD_PRODUCTS = [
     desc: "Free-form stretch tent in iron and fabric for garden parties, receptions and open-air lounges.",
     size: "L900 x W500 x H280 cm (10x10m coverage)", colors: ["Beige/White"], stock: 2,
     imgs: ["cd040-stretch-tent.jpg", "hero-stretch-tent.jpg"]
+  },
+  {
+    code: "CD044", name: "Marquee Tent 20x20m", cat: "tents",
+    desc: "A-frame aluminium marquee tent, 20m wide by 20m long, with white PVC roof and walls, arched windows and curtained entrances. 4m eave and 7.17m ridge height for weddings, conferences and exhibitions.",
+    size: "20m x 20m, eave 4m, ridge 7.17m", colors: ["White"], stock: 1,
+    imgs: ["tent4.jpeg"]
+  },
+  {
+    code: "CD045", name: "Marquee Tent 20x40m", cat: "tents",
+    desc: "A-frame aluminium marquee tent, 20m wide by 40m long, with white PVC roof cover, solid walls, arched windows and curtained entrances. 4m eave and 7.17m ridge height for large ceremonies and expos.",
+    size: "20m x 40m, eave 4m, ridge 7.17m", colors: ["White"], stock: 1,
+    imgs: ["tent5.jpeg"]
+  },
+  {
+    code: "CD046", name: "Marquee Tent 20x50m", cat: "tents",
+    desc: "A-frame aluminium marquee tent, 20m wide by 50m long, with white PVC roof and walls and curtained entrances. 4m eave and 7.17m ridge height, seats large conferences, graduations and trade fairs.",
+    size: "20m x 50m, eave 4m, ridge 7.17m", colors: ["White"], stock: 1,
+    imgs: ["tent2.jpeg"]
+  },
+  {
+    code: "CD047", name: "Marquee Tent 20x60m", cat: "tents",
+    desc: "A-frame aluminium marquee tent, 20m wide by 60m long, with white PVC roof, arched window walls and curtained entrances. 4m eave and 7.17m ridge height for major exhibitions and national events.",
+    size: "20m x 60m, eave 4m, ridge 7.17m", colors: ["White"], stock: 1,
+    imgs: ["tent1.jpeg"]
+  },
+  {
+    code: "CD048", name: "Marquee Tent 20x70m", cat: "tents",
+    desc: "Our largest A-frame aluminium marquee tent, 20m wide by 70m long, with white PVC roof, twin 5m curtained entrances and ballast blocks. 4m eave and 7.17m ridge height, 1,400 sqm of covered space.",
+    size: "20m x 70m, eave 4m, ridge 7.17m", colors: ["White"], stock: 1,
+    imgs: ["tent3.jpeg"]
   },
   {
     code: "CD041", name: "Stanchions & Velvet Rope", cat: "accessories",
