@@ -242,7 +242,7 @@ const CD_PRODUCTS = [
     imgs: ["cd028-shell-panels.jpg", "cd028-shell-panels-render.jpg"]
   },
   {
-    code: "CD029", name: "Shell Scheme Exhibition Booth", cat: "booths",
+    code: "CD029", name: "Full stand with furnitures", cat: "booths",
     desc: "Complete branded exhibition booths: fascia name board, walls, lights, carpet, reception desk, brochure rack, meeting set and dustbin. Sizes: 2x2m, 2x3m, 2x4m, 3x3m, 3x4m, 3x9m and 9x9m. Booth price covers 3 days.",
     size: "2x2m up to 9x9m", colors: ["White panels, blue carpet"], stock: 100,
     imgs: ["cd029-booth-photo.jpeg", "cd029-booth-render.jpg"],

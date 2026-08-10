@@ -62,79 +62,52 @@
   <div class="stands__head fade-in">
     <div>
       <span class="eyebrow-dot">Exhibition Specialists</span>
-      <h2>Our Exhibition Stand Designs</h2>
+      <h2>Ask me all about Events and Exhibitions</h2>
       <p class="stands__sub">
-        Shell scheme booths from 2m x 2m to full custom island stands,
+        Tents, exhibition booth schemes and exhibition furniture,
         designed, branded, built and dismantled by our own crew.
+        Click a category to browse the catalogue.
       </p>
-    </div>
-    <div class="stands__nav">
-      <button class="stands__arrow" id="standsPrev" type="button" aria-label="Previous designs">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg>
-      </button>
-      <button class="stands__arrow" id="standsNext" type="button" aria-label="Next designs">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-      </button>
     </div>
   </div>
 
-  <!-- PLACEHOLDER IMAGES: swap these for real stand design renders / photos as they become available -->
   <div class="stands__track" id="standsTrack">
-    <article class="stand-card fade-in">
+    <a class="stand-card fade-in" href="products.html#cat=tents">
       <div class="stand-card__img">
-        <img src="assets/products/cd037-pagoda-6x6.jpg" alt="Furnished shell scheme booth with counter, chairs and brochure rack" loading="lazy">
+        <img src="assets/products/exhibition/1.tents.jpeg" alt="Pagoda and stretch tents for outdoor events" loading="lazy">
         <span class="stand-card__num">01</span>
       </div>
       <div class="stand-card__body">
-        <span class="stand-card__size">6m x 6m</span>
-        <h3>Shell Scheme Booth</h3>
-        <p>The classic exhibition stand with fascia name board, lighting and carpet, ready for your brand.</p>
+        <span class="stand-card__size">Tents &amp; Outdoor</span>
+        <h3>Tents</h3>
+        <p>Pagoda, stretch and marquee tents for outdoor events, with flooring, lining and setup crew included.</p>
+        <span class="stand-card__link">Browse Tents &rarr;</span>
       </div>
-    </article>
-    <article class="stand-card fade-in">
+    </a>
+    <a class="stand-card fade-in" href="products.html#cat=booths">
       <div class="stand-card__img">
-        <img src="assets/products/cd029-booth-render.jpg" alt="Shell scheme booth structure render" loading="lazy">
+        <img src="assets/products/exhibition/2.schemes.jpeg" alt="Shell scheme exhibition booth structures" loading="lazy">
         <span class="stand-card__num">02</span>
       </div>
       <div class="stand-card__body">
-        <span class="stand-card__size">Furnished package</span>
-        <h3>Booth with Reception Set</h3>
-        <p>Reception counter, meeting table, chairs and brochure rack included, walk in and start exhibiting.</p>
+        <span class="stand-card__size">Booths &amp; Panels</span>
+        <h3>Exhibition Booth Schemes</h3>
+        <p>Shell scheme stands from 2m x 2m to 9m x 9m islands with fascia boards, lighting, carpet and counters.</p>
+        <span class="stand-card__link">Browse Booth Schemes &rarr;</span>
       </div>
-    </article>
-    <article class="stand-card fade-in">
+    </a>
+    <a class="stand-card fade-in" href="products.html#cat=chairs">
       <div class="stand-card__img">
-        <img src="assets/products/cd028-shell-panels.jpg" alt="Freestanding shell scheme panels" loading="lazy">
+        <img src="assets/products/exhibition/3.furnitures.jpeg" alt="Exhibition chairs and bar stools" loading="lazy">
         <span class="stand-card__num">03</span>
       </div>
       <div class="stand-card__body">
-        <span class="stand-card__size">Modular, any layout</span>
-        <h3>Panel Walls &amp; Partitions</h3>
-        <p>Modular walling for exhibition halls, poster sessions, registration zones and wayfinding.</p>
+        <span class="stand-card__size">Chairs &amp; Bar Stools</span>
+        <h3>Exhibition Furnitures</h3>
+        <p>Conference chairs, bar stools and seating for booths, lounges and registration areas, held in stock.</p>
+        <span class="stand-card__link">Browse Furniture &rarr;</span>
       </div>
-    </article>
-    <article class="stand-card fade-in">
-      <div class="stand-card__img">
-        <img src="assets/products/cd028-shell-panels-render.jpg" alt="Modular panel configuration render" loading="lazy">
-        <span class="stand-card__num">04</span>
-      </div>
-      <div class="stand-card__body">
-        <span class="stand-card__size">3m x 6m - 9m x 9m</span>
-        <h3>Corner &amp; Island Stands</h3>
-        <p>Open layouts for bigger footprints, multiple entry points, demo zones and storage.</p>
-      </div>
-    </article>
-    <article class="stand-card fade-in">
-      <div class="stand-card__img">
-        <img src="assets/products/hero-vip-set.jpg" alt="Styled VIP lounge setup" loading="lazy">
-        <span class="stand-card__num">05</span>
-      </div>
-      <div class="stand-card__body">
-        <span class="stand-card__size">Your design, our build</span>
-        <h3>Custom Branded Build</h3>
-        <p>Bring a sketch or a brand book, we design and build a stand that is completely yours.</p>
-      </div>
-    </article>
+    </a>
   </div>
 
   <div class="stands__cta fade-in">
@@ -349,22 +322,6 @@
   });
 })();
 
-// Stand designs carousel
-(function () {
-  "use strict";
-  var track = document.getElementById("standsTrack");
-  if (!track) return;
-  function step() {
-    var card = track.querySelector(".stand-card");
-    return card ? card.getBoundingClientRect().width + 24 : 340;
-  }
-  document.getElementById("standsPrev").addEventListener("click", function () {
-    track.scrollBy({ left: -step(), behavior: "smooth" });
-  });
-  document.getElementById("standsNext").addEventListener("click", function () {
-    track.scrollBy({ left: step(), behavior: "smooth" });
-  });
-})();
 </script>
 </body>
 </html>
