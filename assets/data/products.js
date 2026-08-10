@@ -14,6 +14,48 @@ const CD_CATEGORIES = [
 
 const CD_PRODUCTS = [
   {
+    code: "CD029-2X2", name: "Shell Scheme Stand - 2m x 2m", cat: "booths", sub: "scheme",
+    desc: "Compact 2x2m shell scheme exhibition stand with fascia name board, wall panels, lights, blue carpet, counter desk, brochure rack, chairs with table and dustbin. Booth price covers 3 days.",
+    size: "2m x 2m floor, 2.4m high", colors: ["White panels, blue carpet"], stock: 100,
+    imgs: ["scheme/2by2.jpeg"], note: "Booth cost covers 3 days"
+  },
+  {
+    code: "CD029-2X3", name: "Shell Scheme Stand - 2m x 3m", cat: "booths", sub: "scheme",
+    desc: "2x3m shell scheme exhibition stand with fascia name board, wall panels, lights, blue carpet, counter desk, brochure rack, chairs with table and dustbin. Booth price covers 3 days.",
+    size: "2m x 3m floor, 2.4m high", colors: ["White panels, blue carpet"], stock: 100,
+    imgs: ["scheme/2by3.jpeg"], note: "Booth cost covers 3 days"
+  },
+  {
+    code: "CD029-2X4", name: "Shell Scheme Stand - 2m x 4m", cat: "booths", sub: "scheme",
+    desc: "2x4m shell scheme exhibition stand with fascia name board, wall panels, lights, blue carpet, counter desk, brochure rack, chairs with table and dustbin. Booth price covers 3 days.",
+    size: "2m x 4m floor, 2.4m high", colors: ["White panels, blue carpet"], stock: 100,
+    imgs: ["scheme/2by4.jpeg"], note: "Booth cost covers 3 days"
+  },
+  {
+    code: "CD029-3X3", name: "Shell Scheme Stand - 3m x 3m", cat: "booths", sub: "scheme",
+    desc: "Popular 3x3m shell scheme exhibition stand with fascia name board, wall panels, lights, blue carpet, counter desk, brochure rack, chairs with table and dustbin. Booth price covers 3 days.",
+    size: "3m x 3m floor, 2.4m high", colors: ["White panels, blue carpet"], stock: 100,
+    imgs: ["scheme/3by3.jpeg"], note: "Booth cost covers 3 days"
+  },
+  {
+    code: "CD029-3X4", name: "Shell Scheme Stand - 3m x 4m", cat: "booths", sub: "scheme",
+    desc: "3x4m shell scheme exhibition stand with fascia name board, wall panels, lights, blue carpet, counter desk, brochure rack, chairs with table and dustbin. Booth price covers 3 days.",
+    size: "3m x 4m floor, 2.4m high", colors: ["White panels, blue carpet"], stock: 100,
+    imgs: ["scheme/3by4.jpeg"], note: "Booth cost covers 3 days"
+  },
+  {
+    code: "CD029-3X9", name: "Shell Scheme Stand - 3m x 9m", cat: "booths", sub: "scheme",
+    desc: "Large 3x9m shell scheme exhibition stand with fascia name board, wall panels, lights, blue carpet, counter desk, brochure rack, meeting set and dustbin. Booth price covers 3 days.",
+    size: "3m x 9m floor, 2.4m high", colors: ["White panels, blue carpet"], stock: 100,
+    imgs: ["scheme/3by9.jpeg"], note: "Booth cost covers 3 days"
+  },
+  {
+    code: "CD029-9X9", name: "Shell Scheme Stand - 9m x 9m", cat: "booths", sub: "scheme",
+    desc: "Premium 9x9m island shell scheme exhibition stand with fascia name boards, wall panels, lights, blue carpet, counter desks, brochure racks, meeting sets and dustbins. Booth price covers 3 days.",
+    size: "9m x 9m floor, 2.4m high", colors: ["White panels, blue carpet"], stock: 100,
+    imgs: ["scheme/9by9.jpeg"], note: "Booth cost covers 3 days"
+  },
+  {
     code: "CD001", name: "Foldable Consultation Counter", cat: "booths",
     desc: "Shell scheme counter made of aluminium frames and white laminated plywood. Available simple or lockable, ideal reception desk for exhibition stands.",
     size: "100L x 50W x 100H cm", colors: ["White"], stock: 100,
@@ -201,9 +243,9 @@ const CD_PRODUCTS = [
   },
   {
     code: "CD029", name: "Shell Scheme Exhibition Booth", cat: "booths",
-    desc: "Complete branded exhibition booths: fascia name board, walls, lights, carpet, reception desk, brochure rack, meeting set and dustbin. Sizes: 2x2m, 2x3m, 2x4m, 3x3m, 3x4m, 3x6m and 9x9m. Booth price covers 3 days.",
+    desc: "Complete branded exhibition booths: fascia name board, walls, lights, carpet, reception desk, brochure rack, meeting set and dustbin. Sizes: 2x2m, 2x3m, 2x4m, 3x3m, 3x4m, 3x9m and 9x9m. Booth price covers 3 days.",
     size: "2x2m up to 9x9m", colors: ["White panels, blue carpet"], stock: 100,
-    imgs: ["cd029-booth-photo.jpg", "cd029-booth-render.jpg"],
+    imgs: ["cd029-booth-photo.jpeg", "cd029-booth-render.jpg"],
     note: "Booth cost covers 3 days"
   },
   {

@@ -16,7 +16,7 @@
 <!-- NAVIGATION -->
 <nav id="mainNav">
   <a class="nav-logo" href="index.html">
-    <img class="nav-logo-image" src="cdd.PNG" alt="CD Business Group logo">
+    <img class="nav-logo-image" src="logo1.png" alt="CD Business Group logo">
   </a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNavLinks" aria-label="Toggle navigation">
     <span></span>
@@ -171,33 +171,48 @@
   var CAT_LABEL = {};
   CD_CATEGORIES.forEach(function (c) { CAT_LABEL[c.key] = c.label; });
 
-  /* table sub-categories */
+  /* sub-categories (tables + booths) */
   var subChipRow = document.getElementById("subChipRow");
-  var TABLE_SUBS = [
-    { key: "all", label: "All Tables" },
-    { key: "tables", label: "Tables" },
-    { key: "high", label: "High Tables" },
-    { key: "side", label: "Side Tables" }
-  ];
   var TABLE_SUB_MAP = {
     "CD019": "tables", "CD019-R": "tables",
     "CD014": "high", "CD023": "high", "CD024": "high", "CD027": "high"
   };
-  function tableSub(p) { return TABLE_SUB_MAP[p.code] || "side"; }
+  var CAT_SUBS = {
+    tables: {
+      subs: [
+        { key: "all", label: "All Tables" },
+        { key: "tables", label: "Tables" },
+        { key: "high", label: "High Tables" },
+        { key: "side", label: "Side Tables" }
+      ],
+      subOf: function (p) { return TABLE_SUB_MAP[p.code] || "side"; }
+    },
+    booths: {
+      subs: [
+        { key: "all", label: "All Booths & Panels" },
+        { key: "booths", label: "Booths & Counters" },
+        { key: "scheme", label: "Scheme Measures" }
+      ],
+      subOf: function (p) { return p.sub === "scheme" ? "scheme" : "booths"; }
+    }
+  };
+  function subOf(p) { return CAT_SUBS[p.cat] ? CAT_SUBS[p.cat].subOf(p) : "all"; }
 
   function renderSubChips() {
-    if (activeCat !== "tables") {
+    var cfg = CAT_SUBS[activeCat];
+    if (!cfg) {
       subChipRow.hidden = true;
       subChipRow.innerHTML = "";
       return;
     }
-    var m = { all: 0, tables: 0, high: 0, side: 0 };
+    var m = { all: 0 };
+    cfg.subs.forEach(function (s) { if (s.key !== "all") m[s.key] = 0; });
     CD_PRODUCTS.forEach(function (p) {
-      if (p.cat !== "tables") return;
+      if (p.cat !== activeCat) return;
       m.all++;
-      m[tableSub(p)]++;
+      m[subOf(p)]++;
     });
-    subChipRow.innerHTML = TABLE_SUBS.map(function (s) {
+    subChipRow.innerHTML = cfg.subs.map(function (s) {
       return '<button class="chip chip--sub' + (s.key === activeSub ? " active" : "") + '" data-sub="' + s.key + '">' +
         s.label + ' (' + m[s.key] + ')</button>';
     }).join("");
@@ -234,7 +249,7 @@
 
   function matches(p) {
     if (activeCat !== "all" && p.cat !== activeCat) return false;
-    if (activeCat === "tables" && activeSub !== "all" && tableSub(p) !== activeSub) return false;
+    if (CAT_SUBS[activeCat] && activeSub !== "all" && subOf(p) !== activeSub) return false;
     if (!query) return true;
     var hay = (p.name + " " + p.code + " " + p.desc + " " + CAT_LABEL[p.cat]).toLowerCase();
     return query.toLowerCase().split(/\s+/).every(function (t) { return hay.indexOf(t) > -1; });

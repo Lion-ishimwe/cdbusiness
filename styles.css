@@ -47,13 +47,15 @@ nav.scrolled {
 .nav-logo-image {
   display: block;
   width: auto;
-  height: 42px;
-  max-width: min(36vw, 170px);
+  height: 80px;
+  max-width: min(45vw, 180px);
   object-fit: contain;
 }
 
+nav.scrolled .nav-logo-image { height: 58px; }
+
 .nav-logo-icon {
-  width: 42px; height: 42px;
+  width: 100px; height: 66px;
   position: relative;
   flex-shrink: 0;
 }
@@ -4123,9 +4125,10 @@ footer {
     flex-wrap: wrap;
   }
 
-  .nav-logo-image {
-    height: 36px;
-    max-width: min(46vw, 150px);
+  .nav-logo-image,
+  nav.scrolled .nav-logo-image {
+    height: 66px;
+    max-width: min(50vw, 200px);
   }
 
   .nav-logo-text .brand {
