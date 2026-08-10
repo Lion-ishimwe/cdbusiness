@@ -56,10 +56,17 @@ const CD_PRODUCTS = [
     imgs: ["scheme/9by9.jpeg"], note: "Booth cost covers 3 days"
   },
   {
+    code: "CD029", name: "Full stand with furnitures", cat: "booths",
+    desc: "Complete branded exhibition booths: fascia name board, walls, lights, carpet, reception desk, brochure rack, meeting set and dustbin. Sizes: 2x2m, 2x3m, 2x4m, 3x3m, 3x4m, 3x9m and 9x9m. Booth price covers 3 days.",
+    size: "2x2m up to 9x9m", colors: ["White panels, blue carpet"], stock: 100,
+    imgs: ["cd029-booth-photo.jpeg", "cd029-booth-render.jpg"],
+    note: "Booth cost covers 3 days"
+  },
+  {
     code: "CD001", name: "Foldable Consultation Counter", cat: "booths",
     desc: "Shell scheme counter made of aluminium frames and white laminated plywood. Available simple or lockable, ideal reception desk for exhibition stands.",
     size: "100L x 50W x 100H cm", colors: ["White"], stock: 100,
-    imgs: ["cd001-counter.jpg", "cd001-counter-back.jpg"]
+    imgs: ["cd001-counter-back-logo.jpeg", "cd001-counter-back-logo.jpeg"]
   },
   {
     code: "CD002", name: "Foldable Brochure Rack", cat: "booths",
@@ -77,25 +84,25 @@ const CD_PRODUCTS = [
     code: "CD004", name: "Stacking Chair - Type 2", cat: "chairs",
     desc: "PU upholstered stacking chair with comfortable seat cushion and strong chrome frame. Our workhorse seat for large conferences.",
     size: "40L x 32H x 46W", colors: ["Black"], stock: 1000,
-    imgs: ["cd004-chair-type2.jpg"]
+    imgs: ["cd004-chair-type2-logo.jpeg"]
   },
   {
     code: "CD005", name: "Adjustable Bar Stool - Type 1", cat: "chairs",
     desc: "High quality gas-lift bar stool with glossy moulded seat and chrome trumpet base. Height adjustable for cocktail setups.",
     size: "D38 x SD44 x SH58–78 cm", colors: ["White", "Black"], stock: 60,
-    imgs: ["cd005-bar-stool-t1-black.jpg", "cd005-bar-stool-t1-white.jpg"]
+    imgs: ["cd005-bar-stool-t1-logo.jpeg", "cd005-bar-stool-t1-black-logo.jpeg"]
   },
   {
     code: "CD006", name: "Adjustable Bar Stool - Type 2", cat: "chairs",
     desc: "Quilted high-back PU bar stool with comfortable seat cushion, strong chrome leg and footrest. Adds a premium touch to bar tables.",
     size: "50L x 112H x 50W", colors: ["Black"], stock: 50,
-    imgs: ["cd006-bar-stool-t2.jpg"]
+    imgs: ["cd006-bar-stool-t2-logo.jpeg"]
   },
   {
     code: "CD007", name: "VIP Lounge Chair", cat: "vip",
     desc: "Adjustable height VIP tub chair in iron and PU leather on a polished chrome base. Swivels 360°, perfect for lounges and panel talks.",
     size: "55L x 45H x 50W", colors: ["White", "Black"], stock: 40,
-    imgs: ["cd007-vip-chair.jpg"]
+    imgs: ["cd007-vip-chair-logo.jpeg"]
   },
   {
     code: "CD008", name: "VVIP Armchair - Leather", cat: "vip",
@@ -107,19 +114,19 @@ const CD_PRODUCTS = [
     code: "CD009", name: "VVIP Armchair - Velvet", cat: "vip",
     desc: "Swan-style VVIP armchair upholstered in soft velvet with silver leg. The signature seat for head tables and VVIP lounges.",
     size: "47 x 70 x H61–82 cm", colors: ["Cream", "Black"], stock: 20,
-    imgs: ["cd009-vvip-armchair-velvet.jpg", "cd009-vvip-armchair-velvet-black.jpg"]
+    imgs: ["cd009-vvip-armchair-velvet.jpg", "cd009-vvip-armchair-velvet-black-logo.jpeg"]
   },
   {
     code: "CD010", name: "VVIP Conference Chair", cat: "vip",
     desc: "VVIP visitor chair in iron and PU leather with silver cantilever frame. Executive comfort for boardrooms and delegations.",
     size: "50L x 98H x 60W", colors: ["Black"], stock: 50,
-    imgs: ["cd010-vvip-chair.jpg"]
+    imgs: ["cd010-vvip-chair-logo.jpeg"]
   },
   {
     code: "CD011", name: "Middle Back Chair", cat: "chairs",
     desc: "PU middle-back visitor chair with comfortable cushion, fixed armrests and strong chrome cantilever leg.",
     size: "55L x 96H x 60W", colors: ["Black"], stock: 50,
-    imgs: ["cd011-middle-back-chair.jpg"]
+    imgs: ["cd011-middle-back-chair-logo.jpeg"]
   },
   {
     code: "CD012", name: "Executive Office Seat", cat: "vip",
@@ -131,13 +138,13 @@ const CD_PRODUCTS = [
     code: "CD013", name: "Trade Show Chair", cat: "chairs",
     desc: "Curved PU trade show stool with chrome gas-lift base. Adjustable height 61–81 cm for demo counters and stands.",
     size: "Base D38.5 cm, H61–81 cm", colors: ["Black", "White"], stock: 20,
-    imgs: ["cd013-trade-show-chair.jpg"]
+    imgs: ["cd013-trade-show-chair-logo.jpeg"]
   },
   {
     code: "CD014", name: "Trade Show Table", cat: "tables",
     desc: "Adjustable-height trade show table with ABS top and iron leg. Twist to raise from café height to cocktail height.",
     size: "D60 x H68–92 cm", colors: ["Black", "White"], stock: 10,
-    imgs: ["cd014-trade-show-table.jpg", "cd014-trade-show-table-black.jpeg"]
+    imgs: ["cd014-trade-show-table-logo.jpeg", "cd014-trade-show-table-black.jpeg"]
   },
   {
     code: "CD015", name: "Wooden Bar Stool", cat: "chairs",
@@ -161,13 +168,13 @@ const CD_PRODUCTS = [
     code: "CD018", name: "High Bar Chair", cat: "chairs",
     desc: "Fan-back polypropylene high bar chair. Light, stackable and weather friendly, great for outdoor cocktail setups.",
     size: "44.5 x 49 x H106 cm (seat 75 cm)", colors: ["White", "Black"], stock: 60,
-    imgs: ["cd018-high-bar-chair.jpg"]
+    imgs: ["cd018-high-bar-chair-logo.jpeg"]
   },
   {
     code: "CD019", name: "Rectangular Folding Table", cat: "tables",
     desc: "HDPE folding banquet table on steel frame, folds in half with carry handle. Spandex and stretch covers available.",
     size: "180 x 74 x H74 cm", colors: ["White (covers available)"], stock: 50,
-    imgs: ["cd019-rectangular-table.jpg"]
+    imgs: ["table.jpeg"]
   },
   {
     code: "CD019-H", name: "High Cocktail Table", cat: "tables",
@@ -191,7 +198,7 @@ const CD_PRODUCTS = [
     code: "CD021-S", name: "VVIP Iron Side Table", cat: "tables",
     desc: "Hourglass iron side table with printed marble-effect top and gold accent ring.",
     size: "Side table height", colors: ["Dark wood/Gold"], stock: 10,
-    imgs: ["cd021-iron-side-table.jpg"]
+    imgs: ["cd021-iron-side-table-logo.jpeg", "cd021-iron-side-table-white-logo.jpeg"]
   },
   {
     code: "CD021", name: "Ardell Coffee Table", cat: "tables",
@@ -203,50 +210,43 @@ const CD_PRODUCTS = [
     code: "CD022", name: "Glass Coffee Table", cat: "tables",
     desc: "Clear glass coffee table with polished chrome trumpet base.",
     size: "H50 x W60 cm", colors: ["Clear/Silver"], stock: 10,
-    imgs: ["cd022-glass-coffee-table.jpg"]
+    imgs: ["cd022-glass-coffee-table-logo.jpeg"]
   },
   {
     code: "CD023", name: "Glass High Table", cat: "tables",
     desc: "Clear glass high table with chrome pillar and trumpet base, pairs with bar stools for standing meetings.",
     size: "H70 x W60 cm", colors: ["Clear/Silver"], stock: 10,
-    imgs: ["cd023-glass-high-table.jpg"]
+    imgs: ["cd023-glass-high-table-logo.jpeg"]
   },
   {
     code: "CD024", name: "Milky High Table", cat: "tables",
     desc: "Tulip-style high cocktail table with MDF top and iron pedestal leg.",
     size: "D60 x H105 cm", colors: ["Black", "White"], stock: 30,
-    imgs: ["cd024-milky-high-table.jpg", "cd024-milky-high-table-black.jpg"]
+    imgs: ["cd024-milky-high-table-logo.jpeg", "cd024-milky-high-table-pair-logo.jpeg"]
   },
   {
     code: "CD025", name: "Milky Small Table", cat: "tables",
     desc: "Tulip-style café table with iron leg and wood top. Seats 2–4 for bistro corners.",
     size: "D60 x H73 cm", colors: ["Black", "White"], stock: 10,
-    imgs: ["cd025-milky-small-table.jpg"]
+    imgs: ["cd025-milky-small-table-logo.jpeg", "cd025-milky-small-table-black-logo.jpeg", "cd025-milky-small-table-pair-logo.jpeg"]
   },
   {
     code: "CD026", name: "White Glass Table", cat: "tables",
     desc: "Round white glass table on chrome trumpet base, bright, clean surface for reception areas.",
     size: "D50 x H50 cm", colors: ["White/Silver"], stock: 30,
-    imgs: ["cd026-glass-table-white.jpg"]
+    imgs: ["cd026-glass-table-white-logo.jpeg"]
   },
   {
     code: "CD027", name: "White Adjustable Height Table", cat: "tables",
     desc: "Gas-lift adjustable table in white with chrome base. Converts from café to cocktail height in seconds.",
     size: "D60 x H90–110 cm", colors: ["White"], stock: 50,
-    imgs: ["cd027-adjustable-table.jpg"]
+    imgs: ["cd027-adjustable-table-logo.jpeg"]
   },
   {
     code: "CD028", name: "Shell Scheme Panels", cat: "booths",
     desc: "Professional aluminium shell scheme wall panels for branded booths, space division and event floor layouts.",
     size: "H2.4m x W1m per panel", colors: ["White/Aluminium"], stock: 1000,
     imgs: ["cd028-shell-panels.jpg", "cd028-shell-panels-render.jpg"]
-  },
-  {
-    code: "CD029", name: "Full stand with furnitures", cat: "booths",
-    desc: "Complete branded exhibition booths: fascia name board, walls, lights, carpet, reception desk, brochure rack, meeting set and dustbin. Sizes: 2x2m, 2x3m, 2x4m, 3x3m, 3x4m, 3x9m and 9x9m. Booth price covers 3 days.",
-    size: "2x2m up to 9x9m", colors: ["White panels, blue carpet"], stock: 100,
-    imgs: ["cd029-booth-photo.jpeg", "cd029-booth-render.jpg"],
-    note: "Booth cost covers 3 days"
   },
   {
     code: "CD030", name: "Smart TV (43″ / 50″)", cat: "av",
